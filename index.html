@@ -11,29 +11,39 @@
         <h1>Welcome to My Blog</h1>
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="about">
+        <!-- Profile Section -->
+        <section id="profile">
             <h2>About Me</h2>
-            <p>This is where you introduce yourself!</p>
+            <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+            <p>Hello! I'm passionate about learning and sharing knowledge. Welcome to my personal blog where I share what I've learned.</p>
         </section>
-        <section id="projects">
-            <h2>My Projects</h2>
-            <p>List your awesome projects here.</p>
+
+        <!-- Blog Section -->
+        <section id="blog">
+            <h2>My Blog</h2>
+            <div id="blog-container">
+                <!-- Blog posts will be dynamically added here -->
+            </div>
+            <button id="add-post">Add New Blog Post</button>
         </section>
+
+        <!-- Contact Section -->
         <section id="contact">
             <h2>Contact Me</h2>
-            <p>Provide your contact details or a form here.</p>
+            <p>Feel free to reach out via email or social media!</p>
         </section>
     </main>
     <footer>
         <p>© 2025 My GitHub Blog. All rights reserved.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
