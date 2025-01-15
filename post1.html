@@ -11,8 +11,8 @@
   <style>
     /* 전체 배경: 검은색, 텍스트: 흰색, 줄간격(글자 크기는 변경 안 함) */
     body {
-      background-color: black; 
-      color: #ffffff;  /* ★ 글자색을 밝게 조정 ★ */
+      background-color: #333; 
+      color: black;  /* ★ 글자색을 밝게 조정 ★ */
       line-height: 1.7; 
       margin: 0; 
       padding: 0; 
@@ -26,7 +26,7 @@
 
     /* 블로그 게시물 느낌을 살리기 위한 #post 컨테이너 */
     #post {
-      background: #333;
+      background: white;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       padding: 20px;
@@ -34,17 +34,17 @@
     }
     /* 본문 내 h1, h3 스타일 */
     #post h1 {
-      color: #ffffff;  /* 검은 배경 위에 흰 글씨 */
+      color: black;  /* 검은 배경 위에 흰 글씨 */
       margin-bottom: 10px;
       font-size: 2.5em;
     }
     #post h3 {
-      color: #ffffff;  
+      color: black;  
       margin-bottom: 8px;
       font-size: 1.5em;
     }
     #post p {
-      color: #ffffff;  
+      color: black;  
       margin-bottom: 8px;
       font-size: 1.2em;
     }
@@ -57,7 +57,7 @@
 
 /* 마우스를 올렸을 때 */
 #post a:hover {
-  color: royalblue;
+  color: black;
   text-decoration: underline;
 }
     /* 이미지 스타일 (사용자 정의) */
@@ -70,7 +70,7 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
     .post1-2 {
-      max-width: 1000px;
+      max-width: 1400px;
       height: auto;
       display: block;
       margin: 20px auto;
@@ -95,6 +95,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="blog.html">Blog</a></li>
+        <li><a href="code.html">code</a></li>
       </ul>
     </nav>
   </header>
@@ -103,7 +104,7 @@
     <section id="post">
       <!-- 게시물의 날짜/타이틀 -->
       <p>
-        <span style="font-size: 2.5em; font-weight: bold; color:#ffffff">Generative AI</span>
+        <span style="font-size: 2.5em; font-weight: bold; color:black">Generative AI</span>
         Date: January 15, 2025
       </p>
 
