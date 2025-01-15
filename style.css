@@ -84,14 +84,14 @@ footer {
 .portfolio-container {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px;
 }
 
 .portfolio-pic {
-  max-width: 120px;
+  max-width: 160px;
   height: auto;
   border-radius: 50%;
   display: block;
@@ -100,7 +100,7 @@ footer {
 }
 
 .portfolio-details {
-  max-width: 600px;
+  max-width: 6000px;
   text-align: left;
 }
 
