@@ -10,7 +10,7 @@ body {
   font-family: 'Courier New', Courier, monospace;
   line-height: 1.6;
   margin: 0;
-  background: #121212;
+  background: white;
   color: #e0e0e0;
   overflow-x: hidden;
 }
@@ -29,7 +29,7 @@ header {
 }
 
 header h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin: 0;
   text-shadow: 
     -3px -3px 2px rgba(0, 0, 0, 0.8),
@@ -105,7 +105,7 @@ main {
 }
 
 main section {
-  background: #1e1e1e;
+  background: white;
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
@@ -120,7 +120,7 @@ main section:hover {
 
 main h2 {
   font-size: 2.2rem;
-  color: white;
+  color: black;
   margin-bottom: 15px;
   text-align: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
@@ -130,7 +130,7 @@ main h2 {
 main p {
   font-size: 1.2rem;
   line-height: 1.8;
-  color: #b0bec5;
+  color: black;
 }
 
 /* -----------------------------------
@@ -148,11 +148,11 @@ main p {
 #blog h3 {
   margin: 0;
   font-size: 1.5rem;
-  color: white;
+  color: black;
 }
 
 #blog h3 a {
-  color: white;
+  color: black;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -197,7 +197,7 @@ main p {
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #2a2a2a;
+  background-color: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -218,7 +218,7 @@ main p {
 }
 
 .portfolio-details p {
-  color: #ffffff;
+  color: black;
 }
 
 /* -----------------------------------
