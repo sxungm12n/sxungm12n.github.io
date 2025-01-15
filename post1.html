@@ -79,12 +79,32 @@
 
     /* 푸터: 블로그와 동일하게 */
     footer {
-      text-align: center;
-      padding: 15px 0;
-      background: #333;
-      color: white;
-      margin-top: 20px;
-    }
+  /* 두 개의 그라디언트 이미지를 쉼표(,)로 구분해서 나란히 선언 */
+  background: 
+    radial-gradient(circle, rgba(100, 100, 110, 0.3), transparent 80%),
+    linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    
+  /* blend-mode로 겹치는 부분을 어떻게 섞을지 결정(overlay, multiply, screen 등 다양) */
+  background-blend-mode: overlay;
+
+  color: #f5f5f5;
+  text-align: center;
+  padding: 40px 0;
+  border-top: 2px solid #555;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.5);
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+footer a {
+  color:white
+}
+footer p, footer a {
+  /* 별도로 z-index 조절할 필요 없이 글 내용이 위에 표시됨 */
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
   </style>
 </head>
 <body>
