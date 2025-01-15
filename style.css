@@ -63,7 +63,8 @@ footer {
   text-align: center;
   padding: 1rem 0;
 }
-#portfolio.portfolio-container {
+
+.portfolio-container {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -72,7 +73,7 @@ footer {
   margin-top: 20px;
 }
 
-#portfolio.portfolio-pic {
+.portfolio-pic {
   max-width: 120px; /* 사진의 최대 너비를 120px로 제한 */
   height: auto;     /* 비율을 유지하면서 높이 자동 조정 */
   border-radius: 50%; /* 둥근 모서리 */
@@ -81,13 +82,12 @@ footer {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 약간의 그림자 추가 */
 }
 
-
-#portfolio.portfolio-details {
+.portfolio-details {
   max-width: 600px;
   text-align: left;
 }
 
-#portfolio.portfolio-details p {
+.portfolio-details p {
   margin: 10px 0;
   line-height: 1.6;
 }
