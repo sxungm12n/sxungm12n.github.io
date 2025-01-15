@@ -63,3 +63,28 @@ footer {
   text-align: center;
   padding: 1rem 0;
 }
+.portfolio-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.portfolio-pic {
+  max-width: 120px; /* 사진 크기를 작게 조정 */
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-details {
+  max-width: 600px;
+  text-align: left;
+}
+
+.portfolio-details p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
