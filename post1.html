@@ -3,12 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SeongMin's GitHub Blog - Blog Post 1</title>
+    <title>SeongMin's GitHub Blog - Generative AI</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<style>
+  .post1-1 {
+  max-width: 400px;
+  height: auto;
+  border-radius: 100%;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.post1-2 {
+  max-width: 1200px;
+  height: auto;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+</style>
 <body>
     <header>
-        <h1>Blog Post 1</h1>
+        <h1>Generative AI</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -20,9 +36,35 @@
 
     <main>
         <section id="post">
-            <h2>개발</h2>
-            <p>Date: January 15, 2025</p>
-            <p>This is the full content of the first blog post. Here you can elaborate on the topics covered, share insights, and provide value to your readers.</p>
+          <p><span style="font-size: 2.5em; font-weight: bold;">Generative AI</span> Date: January 15, 2025</p>
+            <h1>Generative AI란?</h1>
+            <h3>생성 AI (Generative AI)</h3>
+            <p>생성 AI는 인공지능 분야의 하나로서 이미지,텍스트,음악,비디오 등 새롭고 독창적인 콘텐츠를 만들 수 있는 모델과 알고리즘을 연구하는 분야 입니다.</p>
+            <img src="./assets/img/post/post1.1.jpg" alt="post1.1" class="post1-1">
+            <p>Source: https://medium.com/@amol-wagh/whatsgenerative-ai-explore-underlying-layers-of-machinelearning-and-deep-learning-8f99272e0b0d</p>
+            <h1>생성 AI의 역사</h1>
+            <p>Generative AI(생성형 AI 혹은 생성 AI)는 단어 그대로 인공지능이 무엇인가를 '만든다'는 것에 주목하는 인공지능 모델입니다.
+               과거에도 무엇인가를 '생성'하는 인공지능은 존재 했지만, 2014년 Generative Adversarial Network(GAN)의 등장으로
+              본격적인 Generative AI의 시대가 시작되었다고 볼 수 있습니다.
+            </p>
+            <img src="./assets/img/post/post1.2.jpg" alt="post1.2" class="post1-2">
+            <p>-인류는 지난 수백 년 동안 자동 계산을 구현 하고자 하는 시도를 해왔음</p>
+            <p>-1940년대 말 현대 컴퓨터의 시초가 되는 모델들이 개발되면서, 인공지능에 대한 연구들이 진행되었음</p>
+            <p>-몇 번의 겨울(인공지능 연구 침체기)을 지나고, 2010년대에 대구모 데이터와 컴퓨터 자원을 활용한 연구들이 각광을 받기 시작함</p>
+            <p>-2023년 ChatGPT의 시대를 지나면서 현재 우리는 '생성 AI'의 시대에 살고 있음</p>
+            <h4>예를 들어 생성 AI의 역사를 생성 AI써서 만들어 보기</h4>
+            <p>아래의 링크를 통해 MyLens.AI라는 서비스를 사용하면 타임라인이나 마인드맵을 손쉽게 만들 수 있습니다.</p>
+            <p></p><a href="https://mylens.ai/">https://mylens.ai/</a></p>
+            <h1>Generative AI의 기술적 배경 및 특징</h1>
+            <h3>인코딩 VS 디코딩</h3>
+            <p>머신러닝의 일반적인 형태는 학습 데이터를 통해 숫자나 범주 데이터로 축약하는 인코딩 과정으로 구성된 반면, 생성 AI의 경우 인공지능의
+              출력데이터를 역으로 그림, 글 등의 원하는 형태로 변환시켜주는 디코딩 과정을 통해 콘텐츠가 '생성' 됩니다.</p>
+            <h3>Large Language Model / Deep Learning</h3>
+            <p>Large Language Model에 기반하는 생성 AI는 딥러닝 인공 신경망에 기반을 두고 있습니다.</p>
+            <h3>인공지능 전용 하드웨어의 필요성</h3>
+            <p>병렬처리(Parallel processing)의 대표적인 예는 GPU입니다. 그런데 딥러닝 알고리즘도 또한 병렬처리를 하기에 좋은 구조를 가지고 있습니다. 
+              NVDIA는 바로 그 점에 착안하여 GPU를 인공지능 전용 하드웨어로 활용하는 방안(CUDA)을 제안하여 현제 인공지능 전용 하드웨어의 대표적인 기업이 되었습니다.</p>
+            <h3>LLM vs SLM</h3>
         </section>
     </main>
 
