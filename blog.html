@@ -1,42 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SeongMin's GitHub Blog - Blog</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SeongMin's GitHub Blog - Blog</title>
+  <!-- 공통 스타일 시트 연결 -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Blog</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>SeongMin's Blog</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section id="blog">
-            <h2>Blog Posts</h2>
-            <article class="blog-summary">
-              <h3><a href="post1.html">Generative AI</a></h3>
-                <p>Date: DECEMBER 16, 2024</p>
-                <p>Summary: This is a brief overview of the first blog post...</p>
-            </article>
+  <main>
+    <section id="blog">
+      <h2>Blog Posts</h2>
 
-            <article class="blog-summary">
-                <h3><a href="post2.html">Blog Post 2</a></h3>
-                <p>Date: January 10, 2025</p>
-                <p>Summary: A short introduction to the second blog post...</p>
-            </article>
-        </section>
-    </main>
+      <!-- 샘플 포스트 목록 -->
+      <article class="blog-summary">
+        <h3><a href="post6.html">Blog Post 6</a></h3>
+        <p>Date: DECEMBER 21, 2024</p>
+        <p>Summary: A short introduction to the sixth blog post...</p>
+      </article>
 
-    <footer>
-        <p>&copy; 2025 SeongMin's GitHub Blog. All rights reserved.</p>
-    </footer>
+      <article class="blog-summary">
+        <h3><a href="post5.html">Blog Post 5</a></h3>
+        <p>Date: DECEMBER 20, 2024</p>
+        <p>Summary: A short introduction to the fifth blog post...</p>
+      </article>
+
+      <article class="blog-summary">
+        <h3><a href="post4.html">Blog Post 4</a></h3>
+        <p>Date: DECEMBER 19, 2024</p>
+        <p>Summary: A short introduction to the fourth blog post...</p>
+      </article>
+
+      <article class="blog-summary">
+        <h3><a href="post3.html">Blog Post 3</a></h3>
+        <p>Date: DECEMBER 18, 2024</p>
+        <p>Summary: A short introduction to the third blog post...</p>
+      </article>
+
+      <article class="blog-summary">
+        <h3><a href="post2.html">Blog Post 2</a></h3>
+        <p>Date: DECEMBER 17, 2024</p>
+        <p>Summary: A short introduction to the second blog post...</p>
+      </article>
+
+      <article class="blog-summary">
+        <h3><a href="post1.html">Generative AI</a></h3>
+        <p>Date: DECEMBER 16, 2024</p>
+        <p>Summary: This is a brief overview of the first blog post...</p>
+      </article>
+
+      <div class="pagination">
+        <!-- 페이지 버튼이 동적으로 생성될 영역 -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SeongMin's GitHub Blog. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const postsPerPage = 5; // 페이지당 보여줄 게시물 수
+    const posts = document.querySelectorAll('.blog-summary');
+    const paginationContainer = document.querySelector('.pagination');
+
+    function createPaginationButtons(totalPosts, postsPerPage) {
+      const totalPages = Math.ceil(totalPosts / postsPerPage);
+      paginationContainer.innerHTML = ''; // 기존 버튼 제거
+
+      for (let i = 1; i <= totalPages; i++) {
+        const button = document.createElement('button');
+        button.classList.add('page-btn');
+        button.dataset.page = i;
+        button.textContent = i;
+
+        button.addEventListener('click', () => {
+          showPage(i);
+        });
+
+        paginationContainer.appendChild(button);
+      }
+    }
+
+    function showPage(page) {
+      const start = (page - 1) * postsPerPage;
+      const end = start + postsPerPage;
+
+      posts.forEach((post, index) => {
+        if (index >= start && index < end) {
+          post.style.display = 'block';
+        } else {
+          post.style.display = 'none';
+        }
+      });
+
+      // 활성화 표시
+      const buttons = paginationContainer.querySelectorAll('button');
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      // 백틱(`) 안에서 변수 참조할 때는 ${}를 사용해야 하므로 주의
+      const activeBtn = paginationContainer.querySelector(`button[data-page="${page}"]`);
+      if (activeBtn) {
+        activeBtn.classList.add('active');
+      }
+    }
+
+    // 초기화
+    createPaginationButtons(posts.length, postsPerPage);
+    showPage(1);
+  </script>
 </body>
 </html>

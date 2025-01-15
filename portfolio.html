@@ -1,69 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SeongMin's GitHub Blog - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SeongMin's GitHub Blog - Portfolio</title>
+  <!-- 공통 스타일 시트 연결 -->
+  <link rel="stylesheet" href="style.css" />
 </head>
-<style>
-  .portfolio-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.portfolio-pic {
-  max-width: 160px;
-  height: auto;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.portfolio-details {
-  max-width: 6000px;
-  text-align: center;
-}
-
-.portfolio-details p {
-  margin: 10px 0;
-  line-height: 1.6;
-}
-
-</style>
 <body>
-    <header>
-        <h1>Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section id="portfolio">
-            <h2>About Me</h2>
-            <div class="portfolio-container">
-                <img src="./assets/img/sm.jpg" alt="Portfolio Picture" class="portfolio-pic">
-                <div class="portfolio-details">
-                    <p>안녕하세요. 생년월일은 2000년 10월 31일이고 고향은 대구광역시이고 개발자를 꿈꾸고 있는 임성민 입니다.</p>
-                    <p>저는 AI가 빠르게 변화하는 분야인 만큼, 개발자에게는 최신 기술과 연구 결과를 지속적으로 학습하고 변화에 적응하는 능력이 중요하다고 생각합니다.</p>
-                    <p>제 좌우명인 "인생은 사막이다"처럼 예측할 수 없는 변화 속에서도 유연하게 적응하며 성장하려는 도전적인 자세가 필요하다고 믿습니다.</p>
-                </div>
-            </div>
-        </section>
-    </main>
+  <main>
+    <section id="portfolio">
+      <h2>About Me</h2>
+      <div class="portfolio-container">
+        <!-- 예시 이미지 경로: ./assets/img/sm.jpg -->
+        <img src="./assets/img/sm.jpg" alt="Portfolio Picture" class="portfolio-pic" />
+        <div class="portfolio-details">
+          <p>
+            안녕하세요. 생년월일은 2000년 10월 31일이고 고향은 대구광역시이며 
+            개발자를 꿈꾸고 있는 임성민입니다.
+          </p>
+          <p>
+            저는 AI가 빠르게 변화하는 분야인 만큼, 개발자에게는 최신 기술과 연구 결과를 
+            지속적으로 학습하고 변화에 적응하는 능력이 중요하다고 생각합니다.
+          </p>
+          <p>
+            제 좌우명인 "인생은 사막이다"처럼 예측할 수 없는 변화 속에서도 
+            유연하게 적응하며 성장하려는 도전적인 자세가 필요하다고 믿습니다.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2025 SeongMin's GitHub Blog. All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 SeongMin's GitHub Blog. All rights reserved.</p>
+  </footer>
 </body>
 </html>
