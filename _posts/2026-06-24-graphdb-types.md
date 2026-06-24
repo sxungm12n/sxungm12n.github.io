@@ -1,7 +1,7 @@
 ---
 title: GraphDB 종류와 Neo4j를 선택한 이유
 date: 2026-06-24 10:00:00 +0900
-categories: [Database, Graph DB]
+categories: [RAG, GraphRAG]
 tags: [graphdb, neo4j, memgraph, tigergraph, neptune, falkordb]
 ---
 
