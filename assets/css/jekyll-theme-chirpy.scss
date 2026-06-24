@@ -14,16 +14,17 @@
 
 /* append your custom style below */
 
-/* === Blue & White theme (matches logo) === */
-:root:not([data-mode]),
-:root[data-mode='light'],
-:root[data-mode='dark'] {
+/* === Blue & White theme (matches logo) ===
+   Chirpy resolves the active theme with the `data-bs-theme` attribute. */
+:root:not([data-bs-theme]),
+:root[data-bs-theme='light'],
+:root[data-bs-theme='dark'] {
   /* Sidebar: solid logo-blue with white text */
   --sidebar-bg: #1f7ac0;
   --sidebar-border-color: #1f7ac0;
   --site-title-color: #ffffff;
   --site-subtitle-color: rgb(255 255 255 / 85%);
-  --sidebar-muted-color: rgb(255 255 255 / 70%);
+  --sidebar-muted-color: rgb(255 255 255 / 75%);
   --sidebar-active-color: #ffffff;
   --sidebar-hover-bg: rgb(255 255 255 / 18%);
   --sidebar-btn-bg: rgb(255 255 255 / 12%);
@@ -50,21 +51,23 @@
   }
 }
 
-/* Make the light/dark mode dropdown readable (its bg is white in light mode,
-   but sidebar text was overridden to white above) */
-#mode-toggle + .dropdown-menu .dropdown-item {
+/* Mode dropdown menu sits on the menu background (not the blue sidebar),
+   so its text must NOT use the white sidebar color. Selector is scoped as
+   specifically as the theme's own rule so it actually wins. */
+#sidebar .sidebar-bottom #mode-toggle + .dropdown-menu .dropdown-item {
   color: var(--text-color);
 
   > i {
     color: var(--text-color);
   }
 
-  &.active {
+  &.active,
+  &.active > i {
     color: var(--link-color);
+  }
 
-    &::after {
-      color: var(--link-color);
-    }
+  &.active::after {
+    color: var(--link-color);
   }
 }
 
