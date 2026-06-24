@@ -13,3 +13,27 @@
 ';
 
 /* append your custom style below */
+
+/* === Blue & White theme (matches logo) === */
+:root:not([data-mode]),
+:root[data-mode='light'],
+:root[data-mode='dark'] {
+  /* Sidebar: solid logo-blue with white text */
+  --sidebar-bg: #1f7ac0;
+  --sidebar-border-color: #1f7ac0;
+  --site-title-color: #ffffff;
+  --site-subtitle-color: rgb(255 255 255 / 85%);
+  --sidebar-muted-color: rgb(255 255 255 / 70%);
+  --sidebar-active-color: #ffffff;
+  --sidebar-hover-bg: rgb(255 255 255 / 18%);
+  --sidebar-btn-bg: rgb(255 255 255 / 12%);
+  --sidebar-btn-color: #ffffff;
+  --avatar-border-color: rgb(255 255 255 / 90%);
+
+  /* Blue accents across the site */
+  --link-color: #1565a8;
+  --checkbox-checked-color: #1f7ac0;
+  --btn-share-hover-color: #1f7ac0;
+  --toc-highlight: #1565a8;
+}
+
