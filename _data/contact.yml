@@ -3,9 +3,10 @@
 - type: github
   icon: "fab fa-github"
 
-- type: email
+- type: naver
   icon: "fas fa-envelope"
-  noblank: true # open link in current tab
+  url: "mailto:tjdalsdk3434@naver.com"
+  noblank: true
 
 - type: gmail
   icon: "fab fa-google"
