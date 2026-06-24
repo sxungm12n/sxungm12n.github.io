@@ -72,9 +72,11 @@
 }
 
 /* Show hero/preview images in full (diagrams, logos) instead of cropping them.
-   The theme uses object-fit: cover which crops near-square images top/bottom. */
+   The theme uses object-fit: cover which crops near-square images top/bottom.
+   On post pages `.preview-img` is the <img> itself; on the home list it is a
+   container with an inner <img>, so both selectors are needed. */
+.preview-img,
 .preview-img img {
-  width: 100%;
   object-fit: contain;
 }
 
