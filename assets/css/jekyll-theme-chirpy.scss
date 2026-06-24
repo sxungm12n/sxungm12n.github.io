@@ -71,3 +71,41 @@
   }
 }
 
+/* === Collapsible sidebar (desktop only) === */
+/* Hide the toggle on mobile, where the hamburger menu is used instead. */
+#sidebar-collapse-toggle {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  #sidebar-collapse-toggle {
+    display: inline-block;
+    order: -1; /* keep it at the far left of the top bar */
+  }
+
+  #sidebar-collapse-toggle i {
+    transition: transform 0.3s ease;
+  }
+
+  #sidebar,
+  #main-wrapper {
+    transition:
+      transform 0.3s ease,
+      margin-left 0.3s ease;
+  }
+
+  html[sidebar-collapse] {
+    #sidebar {
+      transform: translateX(-100%);
+    }
+
+    #main-wrapper {
+      margin-left: 0;
+    }
+
+    #sidebar-collapse-toggle i {
+      transform: rotate(180deg); /* point right to indicate "expand" */
+    }
+  }
+}
+
