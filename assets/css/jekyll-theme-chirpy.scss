@@ -71,6 +71,13 @@
   }
 }
 
+/* Show hero/preview images in full (diagrams, logos) instead of cropping them.
+   The theme uses object-fit: cover which crops near-square images top/bottom. */
+.preview-img img {
+  width: 100%;
+  object-fit: contain;
+}
+
 /* === Collapsible sidebar (desktop only) === */
 /* Hide the toggle on mobile, where the hamburger menu is used instead. */
 #sidebar-collapse-toggle {
