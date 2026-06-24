@@ -37,3 +37,12 @@
   --toc-highlight: #1565a8;
 }
 
+/* Square (non-circular) profile avatar */
+#avatar {
+  border-radius: 8px;
+
+  img {
+    border-radius: 8px;
+  }
+}
+
