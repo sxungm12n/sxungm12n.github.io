@@ -46,3 +46,21 @@
   }
 }
 
+/* Make the light/dark mode dropdown readable (its bg is white in light mode,
+   but sidebar text was overridden to white above) */
+#mode-toggle + .dropdown-menu .dropdown-item {
+  color: var(--text-color);
+
+  > i {
+    color: var(--text-color);
+  }
+
+  &.active {
+    color: var(--link-color);
+
+    &::after {
+      color: var(--link-color);
+    }
+  }
+}
+
