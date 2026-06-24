@@ -22,6 +22,6 @@ order: 4
 
 ## 📫 연락처
 
-- Email: <tjdalsdk3434@naver.com>
-- Email: <tjdalsdk56@gmail.com>
-- GitHub: [sxungm12n](https://github.com/sxungm12n)
+- **Naver**: [tjdalsdk3434@naver.com](mailto:tjdalsdk3434@naver.com)
+- **Gmail**: [tjdalsdk56@gmail.com](mailto:tjdalsdk56@gmail.com)
+- **GitHub**: [github.com/sxungm12n](https://github.com/sxungm12n)
