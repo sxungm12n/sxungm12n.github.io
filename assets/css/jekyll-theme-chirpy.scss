@@ -118,3 +118,180 @@
   }
 }
 
+/* ============================================================
+   Polished blog look & feel
+   ============================================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- Sidebar: soft gradient + depth --- */
+#sidebar {
+  background: linear-gradient(180deg, #2a8ad4 0%, #1f7ac0 52%, #1a6aa8 100%);
+  box-shadow: 2px 0 16px rgb(26 106 168 / 18%);
+}
+
+/* Avatar: subtle ring + lift on hover */
+#avatar {
+  box-shadow: 0 6px 18px rgb(0 0 0 / 18%);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.04);
+    box-shadow: 0 10px 24px rgb(0 0 0 / 26%);
+  }
+}
+
+/* Site title: a touch more presence */
+#sidebar .site-title {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* Nav links: rounded pill hover + smooth motion */
+#sidebar .nav .nav-item {
+  border-radius: 10px;
+  overflow: hidden;
+
+  .nav-link {
+    border-radius: 10px;
+    transition:
+      background-color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  &:hover .nav-link {
+    background-color: var(--sidebar-hover-bg);
+    transform: translateX(2px);
+  }
+
+  &.active .nav-link {
+    background-color: rgb(255 255 255 / 16%);
+  }
+}
+
+/* --- Home post cards: lift, glow, animated title --- */
+#post-list {
+  margin-top: 1rem;
+
+  .card-wrapper {
+    border-radius: 14px;
+    border: 1px solid var(--card-border-color, rgb(0 0 0 / 6%));
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      border-color 0.25s ease;
+    will-change: transform;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 32px rgb(31 122 192 / 18%);
+      border-color: rgb(31 122 192 / 35%);
+    }
+  }
+
+  .card-title {
+    font-weight: 700;
+    line-height: 1.35;
+    transition: color 0.2s ease;
+  }
+
+  .card-wrapper:hover .card-title {
+    color: var(--link-color);
+  }
+
+  .post-meta {
+    font-size: 0.82rem;
+
+    .categories {
+      font-weight: 600;
+      color: var(--link-color);
+    }
+  }
+}
+
+/* --- Post content: cleaner reading experience --- */
+.post .content {
+  line-height: 1.8;
+
+  /* Rounded, softly shadowed images in posts */
+  img {
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgb(0 0 0 / 8%);
+  }
+
+  /* Headings get a tasteful accent */
+  h2 {
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid rgb(31 122 192 / 18%);
+  }
+
+  h2,
+  h3 {
+    scroll-margin-top: 4rem;
+  }
+
+  /* Blockquotes pop with the brand blue */
+  blockquote {
+    border-left: 4px solid var(--link-color) !important;
+    background: rgb(31 122 192 / 6%);
+    border-radius: 0 8px 8px 0;
+    padding: 0.6rem 1rem;
+  }
+
+  /* Inline code: subtle tinted chip */
+  code:not(pre code) {
+    background: rgb(31 122 192 / 10%);
+    border-radius: 5px;
+    padding: 0.15em 0.4em;
+  }
+
+  /* Links: animated underline */
+  a:not(.img-link) {
+    text-decoration: none;
+    background-image: linear-gradient(var(--link-color), var(--link-color));
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size 0.25s ease;
+
+    &:hover {
+      background-size: 100% 2px;
+    }
+  }
+
+  /* Tables: rounded, striped, comfortable */
+  table {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 6%);
+
+    thead {
+      background: rgb(31 122 192 / 10%);
+    }
+  }
+}
+
+/* --- Pagination buttons: brand-tinted hover --- */
+.pagination .page-item .page-link {
+  border-radius: 8px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover {
+    color: var(--link-color);
+  }
+}
+
+/* --- Back-to-top button: brand blue --- */
+#back-to-top {
+  background: var(--sidebar-bg);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 14px rgb(31 122 192 / 35%);
+}
+
