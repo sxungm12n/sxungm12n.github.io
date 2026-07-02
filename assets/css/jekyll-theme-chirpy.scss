@@ -595,3 +595,135 @@ html {
   }
 }
 
+/* ============================================================
+   Extra polish pass — headers, tags, TOC, related, misc
+   ============================================================ */
+
+/* Brand-tinted text selection */
+::selection {
+  background: rgb(31 122 192 / 22%);
+}
+
+/* --- Post header: bigger title, cleaner meta --- */
+.post > article > header,
+article[data-toc] > header {
+  margin-bottom: 1.5rem;
+
+  h1 {
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+
+  .post-meta {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* --- Tag chips (post tail + trending tags panel) --- */
+.post-tag {
+  border-radius: 999px !important;
+  border: 1px solid rgb(31 122 192 / 30%) !important;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    border-color 0.2s ease !important;
+
+  &:hover {
+    background: var(--link-color) !important;
+    border-color: var(--link-color) !important;
+    color: #fff !important;
+    transform: translateY(-1px);
+  }
+}
+
+/* --- Right panel: refined section headings --- */
+#panel-wrapper {
+  .panel-heading {
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+
+  /* Active TOC entry stands out */
+  .toc .toc-link.active,
+  .toc .is-active-link {
+    font-weight: 700;
+    color: var(--link-color) !important;
+  }
+}
+
+/* --- Related posts: gentle lift on hover --- */
+#related-posts {
+  .card {
+    border-radius: 12px;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 26px rgb(31 122 192 / 14%);
+    }
+  }
+}
+
+/* --- Search input: pill shape + focus ring --- */
+#search-wrapper,
+#search-result-wrapper {
+  input,
+  .search-input {
+    border-radius: 999px;
+    transition:
+      box-shadow 0.2s ease,
+      background-color 0.2s ease;
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgb(31 122 192 / 18%);
+    }
+  }
+}
+
+/* --- Prompt / callout blocks: softer corners --- */
+.post .content {
+  .prompt-tip,
+  .prompt-info,
+  .prompt-warning,
+  .prompt-danger {
+    border-radius: 8px;
+  }
+
+  /* Code blocks: rounder, subtle shadow */
+  .highlight,
+  div.highlighter-rouge {
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgb(0 0 0 / 6%);
+  }
+
+  /* First heading shouldn't carry a big top gap after the header */
+  > h2:first-child,
+  > h3:first-child {
+    margin-top: 0.5rem;
+  }
+}
+
+/* --- Footer: quiet & centered --- */
+#tail-wrapper footer,
+footer#footer {
+  opacity: 0.85;
+  font-size: 0.82rem;
+}
+
+/* --- Sidebar bottom icons: hover pop --- */
+#sidebar .sidebar-bottom a,
+#sidebar .sidebar-bottom .btn {
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
