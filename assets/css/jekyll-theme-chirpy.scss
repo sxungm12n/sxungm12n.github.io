@@ -295,3 +295,124 @@ html {
   box-shadow: 0 4px 14px rgb(31 122 192 / 35%);
 }
 
+/* ============================================================
+   Projects page
+   ============================================================ */
+.projects-intro {
+  color: var(--text-muted-color, #7f7f7f);
+  margin-bottom: 1.6rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 1.35rem;
+  border: 1px solid var(--card-border-color, rgb(0 0 0 / 6%));
+  border-radius: 14px;
+  background: var(--card-bg, #fff);
+  box-shadow: 0 3px 12px rgb(0 0 0 / 5%);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px rgb(31 122 192 / 16%);
+    border-color: rgb(31 122 192 / 35%);
+  }
+
+  .project-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.6rem;
+  }
+
+  .project-emoji {
+    font-size: 1.6rem;
+    line-height: 1;
+  }
+
+  .project-period {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--link-color);
+    background: rgb(31 122 192 / 10%);
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+  }
+
+  .project-title {
+    margin: 0.1rem 0 0.5rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+  }
+
+  .project-desc {
+    margin-bottom: 0.75rem;
+    font-size: 0.92rem;
+    color: var(--text-color);
+  }
+
+  .project-points {
+    margin: 0 0 0.9rem;
+    padding-left: 1.1rem;
+
+    li {
+      font-size: 0.86rem;
+      margin-bottom: 0.25rem;
+      color: var(--text-muted-color, #6b6b6b);
+    }
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .ptag {
+    font-size: 0.74rem;
+    font-weight: 600;
+    color: var(--link-color);
+    border: 1px solid rgb(31 122 192 / 30%);
+    padding: 0.15rem 0.55rem;
+    border-radius: 6px;
+  }
+
+  .project-links {
+    margin-top: auto;
+    display: flex;
+    gap: 0.75rem;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #fff;
+      background: var(--sidebar-bg);
+      padding: 0.35rem 0.8rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+
+      &:hover {
+        transform: translateY(-1px);
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
