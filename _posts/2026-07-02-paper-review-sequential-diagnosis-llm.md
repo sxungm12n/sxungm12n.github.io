@@ -1,7 +1,7 @@
 ---
 title: "[논문 리뷰] 언어 모델로 하는 순차적 진단 (Sequential Diagnosis with LLMs)"
 date: 2026-07-02 09:00:00 +0900
-categories: [Paper Review, LLM]
+categories: [Paper Review]
 tags: [paper-review, llm, multi-agent, medical-ai, agent, benchmark]
 paper:
   title: "Sequential Diagnosis with Language Models"
