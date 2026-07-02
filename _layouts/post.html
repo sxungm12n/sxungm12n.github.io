@@ -77,6 +77,10 @@ script_includes:
     </dialog>
   {% endif %}
 
+  {% if page.paper %}
+    {% include paper-info.html paper=page.paper %}
+  {% endif %}
+
   <div class="content">
     {{ content }}
   </div>

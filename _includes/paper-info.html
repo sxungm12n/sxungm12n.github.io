@@ -1,0 +1,35 @@
+<!-- Paper info summary box for journal-review posts.
+     Rendered when a post defines `paper:` in its front matter. -->
+{%- assign p = include.paper -%}
+<div class="paper-info">
+  <div class="paper-info-label">
+    <i class="fas fa-file-lines"></i> Paper
+  </div>
+
+  {% if p.title %}
+    <h2 class="paper-info-title">{{ p.title }}</h2>
+  {% endif %}
+
+  <ul class="paper-info-meta">
+    {% if p.authors %}
+      <li><span class="pi-key">저자</span><span class="pi-val">{{ p.authors }}</span></li>
+    {% endif %}
+    {% if p.venue %}
+      <li><span class="pi-key">발표</span><span class="pi-val">{{ p.venue }}{% if p.year %} · {{ p.year }}{% endif %}</span></li>
+    {% elsif p.year %}
+      <li><span class="pi-key">연도</span><span class="pi-val">{{ p.year }}</span></li>
+    {% endif %}
+    {% if p.link %}
+      <li>
+        <span class="pi-key">링크</span>
+        <span class="pi-val">
+          <a href="{{ p.link }}" target="_blank" rel="noopener noreferrer">{{ p.link }}</a>
+        </span>
+      </li>
+    {% endif %}
+  </ul>
+
+  {% if p.summary %}
+    <p class="paper-info-summary"><strong>한 줄 평.</strong> {{ p.summary }}</p>
+  {% endif %}
+</div>

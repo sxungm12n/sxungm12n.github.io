@@ -416,3 +416,158 @@ html {
   }
 }
 
+/* ============================================================
+   Journal Review — paper info box (in post) + list (in tab)
+   ============================================================ */
+
+/* Paper summary box shown at the top of a review post */
+.paper-info {
+  margin: 0 0 1.75rem;
+  padding: 1.1rem 1.3rem;
+  border: 1px solid rgb(31 122 192 / 25%);
+  border-left: 4px solid var(--link-color);
+  border-radius: 10px;
+  background: rgb(31 122 192 / 6%);
+
+  .paper-info-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--link-color);
+    margin-bottom: 0.5rem;
+  }
+
+  .paper-info-title {
+    margin: 0 0 0.75rem;
+    padding: 0;
+    border: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .paper-info-meta {
+    list-style: none;
+    margin: 0 0 0.5rem;
+    padding: 0;
+
+    li {
+      display: flex;
+      gap: 0.6rem;
+      font-size: 0.88rem;
+      padding: 0.15rem 0;
+    }
+
+    .pi-key {
+      flex: 0 0 3.2rem;
+      font-weight: 600;
+      color: var(--link-color);
+    }
+
+    .pi-val {
+      flex: 1;
+      word-break: break-word;
+    }
+  }
+
+  .paper-info-summary {
+    margin: 0.6rem 0 0;
+    padding-top: 0.6rem;
+    border-top: 1px dashed rgb(31 122 192 / 25%);
+    font-size: 0.9rem;
+  }
+}
+
+/* Journal Review tab: list of reviews */
+.journal-intro {
+  color: var(--text-muted-color, #7f7f7f);
+  margin-bottom: 1.5rem;
+}
+
+.journal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.journal-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.3rem;
+  border: 1px solid var(--card-border-color, rgb(0 0 0 / 6%));
+  border-radius: 12px;
+  background: var(--card-bg, #fff);
+  text-decoration: none !important;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgb(31 122 192 / 14%);
+    border-color: rgb(31 122 192 / 35%);
+
+    .journal-item-title {
+      color: var(--link-color);
+    }
+  }
+
+  .journal-item-title {
+    margin: 0 0 0.35rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-color);
+    transition: color 0.2s ease;
+  }
+
+  .journal-item-paper {
+    margin: 0 0 0.4rem;
+    font-size: 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    .journal-venue {
+      font-weight: 600;
+      color: var(--link-color);
+      background: rgb(31 122 192 / 10%);
+      padding: 0.1rem 0.5rem;
+      border-radius: 999px;
+    }
+
+    .journal-authors {
+      color: var(--text-muted-color, #7f7f7f);
+    }
+  }
+
+  .journal-item-summary {
+    margin: 0;
+    font-size: 0.88rem;
+    color: var(--text-muted-color, #6b6b6b);
+  }
+
+  .journal-item-date {
+    flex: 0 0 auto;
+    font-size: 0.78rem;
+    color: var(--text-muted-color, #9a9a9a);
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 576px) {
+  .journal-item {
+    flex-direction: column;
+
+    .journal-item-date {
+      order: -1;
+    }
+  }
+}
+

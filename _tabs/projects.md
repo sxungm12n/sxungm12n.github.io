@@ -1,7 +1,7 @@
 ---
 layout: page
 icon: fas fa-diagram-project
-order: 4
+order: 5
 ---
 
 <p class="projects-intro">진행했던 프로젝트들을 소개합니다. 관심 있는 프로젝트를 눌러 자세히 확인해 보세요.</p>

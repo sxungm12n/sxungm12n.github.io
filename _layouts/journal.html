@@ -1,0 +1,41 @@
+---
+layout: page
+---
+
+{% include lang.html %}
+
+{% assign reviews = site.posts | where_exp: "post", "post.categories contains 'Paper Review'" %}
+
+{% if reviews.size > 0 %}
+  <p class="journal-intro">읽은 논문을 정리하고 생각을 기록합니다. 총 {{ reviews.size }}편.</p>
+
+  <div class="journal-list">
+    {% for post in reviews %}
+      <a class="journal-item" href="{{ post.url | relative_url }}">
+        <div class="journal-item-main">
+          <h3 class="journal-item-title">{{ post.title }}</h3>
+
+          {% if post.paper %}
+            <p class="journal-item-paper">
+              {% if post.paper.venue %}<span class="journal-venue">{{ post.paper.venue }}{% if post.paper.year %} · {{ post.paper.year }}{% endif %}</span>{% endif %}
+              {% if post.paper.authors %}<span class="journal-authors">{{ post.paper.authors }}</span>{% endif %}
+            </p>
+          {% endif %}
+
+          {% if post.paper.summary %}
+            <p class="journal-item-summary">{{ post.paper.summary }}</p>
+          {% else %}
+            <p class="journal-item-summary">{% include post-summary.html %}</p>
+          {% endif %}
+        </div>
+
+        <div class="journal-item-date">
+          <i class="far fa-calendar fa-fw me-1"></i>
+          {% include datetime.html date=post.date lang=lang %}
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+{% else %}
+  <p class="journal-intro">아직 등록된 저널 리뷰가 없습니다. 곧 채워집니다 🙂</p>
+{% endif %}
