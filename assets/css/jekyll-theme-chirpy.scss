@@ -2,7 +2,8 @@
 ---
 
 @use 'abstracts/variables' with (
-  $theme: '{{ site.theme_mode }}'
+  $theme: '{{ site.theme_mode }}',
+  $main-content-max-width: 1600px
 );
 
 /* prettier-ignore */
@@ -124,6 +125,16 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* --- Wider reading area on large screens ---
+   Theme caps the container width only at >=1650px (via $main-content-max-width);
+   between 1200–1650px it falls back to Bootstrap's narrower defaults (1140/1320px).
+   Let it breathe by using most of the viewport in that range. */
+@media (min-width: 1200px) and (max-width: 1649.98px) {
+  #main-wrapper > .container {
+    max-width: 96%;
+  }
 }
 
 /* --- Sidebar: soft gradient + depth --- */
