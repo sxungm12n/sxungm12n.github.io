@@ -47,8 +47,21 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top;
+    object-position: center center;
     border-radius: 8px;
+  }
+}
+
+/* Center the profile block (avatar + name + tagline) in the sidebar
+   instead of the theme's default left-indent. */
+#sidebar .profile-wrapper {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  text-align: center;
+
+  #avatar {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
