@@ -19,6 +19,9 @@
     {% elsif p.year %}
       <li><span class="pi-key">연도</span><span class="pi-val">{{ p.year }}</span></li>
     {% endif %}
+    {% if p.submitted %}
+      <li><span class="pi-key">제출</span><span class="pi-val">{{ p.submitted }}</span></li>
+    {% endif %}
     {% if p.link %}
       <li>
         <span class="pi-key">링크</span>
