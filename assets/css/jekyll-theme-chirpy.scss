@@ -63,6 +63,16 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  /* .site-title uses width: fit-content, so it needs auto margins to center */
+  .site-title {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .site-subtitle {
+    text-align: center;
+  }
 }
 
 /* Mode dropdown menu sits on the menu background (not the blue sidebar),
