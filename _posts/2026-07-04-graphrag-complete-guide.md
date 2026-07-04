@@ -14,6 +14,18 @@ toc: true
 
 대규모 언어 모델(LLM)은 놀라운 답변을 만들어내지만, 학습하지 않은 최신 정보나 우리 회사·연구실 내부 지식은 알지 못합니다. 그래서 우리는 LLM의 성능과 정확성을 높이기 위해 크게 세 가지 기술을 씁니다: **프롬프트(Prompting)**, **RAG(Retrieval-Augmented Generation)**, **파인튜닝(Fine-tuning)**.
 
+```mermaid
+flowchart LR
+    LLM([LLM 성능·정확성 높이기])
+    LLM --> P["프롬프트<br/>Prompting"]
+    LLM --> R["RAG<br/>Retrieval-Augmented Generation"]
+    LLM --> F["파인튜닝<br/>Fine-tuning"]
+    P --> Pd["질문을 잘 던져<br/>내재 지식을 끌어냄"]
+    R --> Rd["외부 지식을 검색해<br/>답변에 근거로 붙임"]
+    F --> Fd["모델 가중치를<br/>직접 추가 학습"]
+```
+*LLM의 성능·정확성을 높이는 세 가지 핵심 기술. 이 글은 그중 RAG, 그리고 RAG를 확장한 GraphRAG를 다룬다.*
+
 이 글은 RAG에서 출발합니다. RAG의 원리를 차근차근 살펴본 뒤, RAG가 태생적으로 잘 못하는 부분 — 바로 *정보들 사이의 '관계'* — 을 이해합니다. 그리고 그 빈틈을 **지식 그래프(Knowledge Graph)** 로 메운 기술, **GraphRAG** 가 어떻게 작동하는지, 실제 인덱싱·검색은 어떤 단계로 이뤄지는지, 최신 연구에서 성능은 정말 더 나은지까지 파고듭니다.
 
 입문자를 위한 개념 설명은 앞쪽에, 실무자를 위한 구조·코드·트레이드오프는 뒤쪽에 배치했습니다.
