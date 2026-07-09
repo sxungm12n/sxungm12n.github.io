@@ -6,8 +6,6 @@
   $main-content-max-width: 1400px,
   $sidebar-width: 272px,
   $sidebar-width-large: 300px,
-  $font-family-base: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif,
-  $font-family-heading: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif,
   $radius-sm: 8px,
   $radius-lg: 14px
 );
@@ -202,6 +200,17 @@ body {
   font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.site-title,
+.card-title {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }
 
 ::selection {
