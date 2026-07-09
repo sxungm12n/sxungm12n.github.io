@@ -1,15 +1,25 @@
 ---
-# the default layout is 'page'
+layout: page
 icon: fas fa-info-circle
 order: 6
 ---
 
-## 👋 소개
+<div class="about-hero">
+  <div class="about-avatar">
+    <img src="/assets/img/avatar.png" alt="{{ site.social.name }}" width="96" height="96">
+  </div>
+  <div class="about-hero-text">
+    <h2 class="about-name">{{ site.social.name }}</h2>
+    <p class="about-role">{{ site.tagline }}</p>
+    <p class="about-bio">데이터와 그래프, RAG에 관심이 많은 개발자입니다. 배운 것을 기록하고 공유합니다.</p>
+    <div class="about-links">
+      <a href="https://github.com/{{ site.github.username }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+      <a href="mailto:{{ site.social.email }}"><i class="fas fa-envelope"></i> 이메일</a>
+    </div>
+  </div>
+</div>
 
-기록하는 개발자 **임성민**입니다.
-데이터와 그래프, RAG에 관심이 많습니다.
-
-## 📜 자격증
+## 자격증
 
 | 취득일자 | 자격증 | 발급기관 | 자격번호 |
 | --- | --- | --- | --- |
@@ -20,7 +30,7 @@ order: 6
 | 2019.06.25 | Office Excel® 2010 | Microsoft | wCeSo-4Sve |
 | 2019.06.24 | Office PowerPoint® 2010 | Microsoft | unRW-XLeY |
 
-## 📫 연락처
+## 연락처
 
 - **Naver**: [tjdalsdk3434@naver.com](mailto:tjdalsdk3434@naver.com)
 - **Gmail**: [tjdalsdk56@gmail.com](mailto:tjdalsdk56@gmail.com)

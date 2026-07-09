@@ -1,30 +1,38 @@
 <!-- The Footer -->
 
-<footer
-  aria-label="Site Info"
-  class="
-    d-flex flex-column justify-content-center text-muted
-    flex-lg-row justify-content-lg-between align-items-lg-center pb-lg-3
-  "
->
-  <p>
-    {{- '©' }}
-    <time>{{ 'now' | date: '%Y' }}</time>
+<footer aria-label="Site Info" class="site-footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a class="footer-logo" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <p class="footer-tagline">{{ site.tagline }}</p>
+    </div>
 
-    {% if site.social.links %}
-      <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>.
-    {% else %}
-      <em class="fst-normal">{{ site.social.name }}</em>.
-    {% endif %}
+    <nav class="footer-nav" aria-label="바로가기">
+      <a href="{{ '/' | relative_url }}">홈</a>
+      <a href="{{ '/archives/' | relative_url }}">아카이브</a>
+      <a href="{{ '/categories/' | relative_url }}">카테고리</a>
+      <a href="{{ '/about/' | relative_url }}">정보</a>
+    </nav>
 
-    {% if site.data.locales[include.lang].copyright.brief %}
-      <span
-        data-bs-toggle="tooltip"
-        data-bs-placement="top"
-        title="{{ site.data.locales[include.lang].copyright.verbose }}"
-      >
-        {{- site.data.locales[include.lang].copyright.brief -}}
-      </span>
-    {% endif %}
-  </p>
+    <div class="footer-social">
+      <a href="https://github.com/{{ site.github.username }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="mailto:{{ site.social.email }}" aria-label="이메일">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>
+      © <time>{{ 'now' | date: '%Y' }}</time>
+      {% if site.social.links %}
+        <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>
+      {% else %}
+        {{ site.social.name }}
+      {% endif %}
+      · {{ site.data.locales[include.lang].copyright.brief }}
+    </p>
+  </div>
 </footer>
