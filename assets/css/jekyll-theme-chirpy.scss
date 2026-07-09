@@ -1651,6 +1651,142 @@ article[data-toc] > header {
   gap: 1rem;
 }
 
+.project-showcase {
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+
+  .project-showcase-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .project-emoji {
+    font-size: 1.35rem;
+    line-height: 1;
+  }
+
+  .project-type {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-3);
+    background: var(--bg);
+    border: 1px solid var(--border-strong);
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+  }
+
+  .project-showcase-title {
+    font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+    font-weight: 800;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+    margin: 0 0 1rem;
+    border: 0;
+    padding: 0;
+  }
+
+  .project-tags {
+    margin-bottom: 1.25rem;
+  }
+
+  .project-section {
+    margin-bottom: 1.5rem;
+
+    &:last-of-type {
+      margin-bottom: 1.25rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 0 0 0.65rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 2px solid var(--brand-soft);
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: var(--text-2);
+      line-height: 1.75;
+      margin: 0 0 0.75rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .project-points {
+    margin-bottom: 0.75rem;
+
+    li {
+      font-size: 0.88rem;
+      line-height: 1.65;
+      margin-bottom: 0.45rem;
+    }
+  }
+
+  .project-flow {
+    margin: 0;
+    padding: 1rem 1.1rem;
+    background: var(--bg);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-sm);
+    overflow-x: auto;
+
+    code {
+      font-size: 0.82rem;
+      line-height: 1.7;
+      color: var(--text-2);
+      background: transparent;
+      border: 0;
+      padding: 0;
+      white-space: pre;
+    }
+  }
+
+  .project-links {
+    margin-top: 0.25rem;
+
+    a {
+      border-bottom: none !important;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .project-note {
+    margin: 1rem 0 0;
+    font-size: 0.78rem;
+    color: var(--text-3);
+    line-height: 1.5;
+  }
+
+  code:not(pre code) {
+    font-size: 0.84em;
+    background: var(--code-bg);
+    color: var(--code-color);
+    border: 1px solid var(--border-strong);
+    border-radius: 4px;
+    padding: 0.1em 0.35em;
+  }
+}
+
+@media (max-width: 576px) {
+  .project-showcase {
+    padding: 1.25rem;
+  }
+}
+
 .project-card {
   background: var(--surface);
   border: 1px solid var(--border-strong);
