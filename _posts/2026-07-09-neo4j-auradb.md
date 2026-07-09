@@ -1,6 +1,6 @@
 ---
 title: "Neo4j AuraDB로 그래프 DB 운영 시작하기: 인스턴스 생성부터 대시보드까지"
-date: 2026-07-09 21:00:00 +0900
+date: 2026-07-09 12:00:00 +0900
 categories: [AI, Graph Database]
 tags: [Neo4j, AuraDB, Graph Database, Cypher, Bloom, GraphRAG]
 description: "Neo4j의 완전 관리형 클라우드 그래프 DB인 AuraDB를 설치 없이 시작하는 법 — 티어를 비교해 무료 인스턴스를 만들고, 접속 정보를 받아 연결하고, Cypher로 데이터를 넣고, Bloom·Dashboards로 탐색·시각화하는 실습 가이드."
