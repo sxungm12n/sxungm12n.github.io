@@ -4,7 +4,7 @@ icon: fas fa-diagram-project
 order: 5
 ---
 
-<p class="projects-intro">직접 진행한 프로젝트를 소개합니다. 블로그 글 시리즈는 <a href="{{ '/categories/graphrag/' | relative_url }}">GraphRAG 카테고리</a>에서 볼 수 있습니다.</p>
+<p class="projects-intro">직접 진행한 프로젝트를 소개합니다.</p>
 
 <div class="project-grid">
   <article class="project-card project-card-placeholder">
