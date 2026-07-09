@@ -10,14 +10,39 @@ order: 6
   </div>
   <div class="about-hero-text">
     <h2 class="about-name">{{ site.social.name }}</h2>
+    <p class="about-greeting">안녕하세요! 👋</p>
     <p class="about-role">{{ site.tagline }}</p>
-    <p class="about-bio">데이터와 그래프, RAG에 관심이 많은 개발자입니다. 배운 것을 기록하고 공유합니다.</p>
     <div class="about-links">
       <a href="https://github.com/{{ site.github.username }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
       <a href="mailto:{{ site.social.email }}"><i class="fas fa-envelope"></i> 이메일</a>
     </div>
   </div>
 </div>
+
+<ul class="about-timeline">
+  <li>
+    <span class="about-timeline-icon" aria-hidden="true">🎓</span>
+    <span class="about-timeline-text">
+      <strong>건국대학교 컴퓨터공학과</strong>
+      <span class="about-timeline-period">2019.03. ~ 2025.03.</span>
+    </span>
+  </li>
+  <li>
+    <span class="about-timeline-icon" aria-hidden="true">🪟</span>
+    <span class="about-timeline-text">
+      <strong>Microsoft AI School</strong>
+      <span class="about-timeline-period">2024.12.16. ~ 2025.06.13.</span>
+    </span>
+  </li>
+</ul>
+
+<blockquote class="about-quote">
+  <p class="about-quote-lead">"인생은 사막이다."</p>
+  <p>끝없는 모래 위, 바람이 불 때마다 길은 사라지고 또 새롭게 그려집니다.<br>
+  변화는 두려움이 아닌, 나아갈 수 있는 또 다른 방향.<br>
+  AI라는 변화하는 시대 속에서도 저는 멈추지 않고,<br>
+  유연하게, 끊임없이 나를 갈고닦아가는 개발자입니다.</p>
+</blockquote>
 
 ## 자격증
 
