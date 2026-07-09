@@ -56,13 +56,6 @@ layout: default
         <article class="featured-card">
           <a href="{{ featured.url | relative_url }}" class="featured-card-link">
             <div class="featured-card-body">
-              {% if featured.categories.size > 0 %}
-                <div class="post-categories">
-                  {% for category in featured.categories limit: 3 %}
-                    <span class="category-pill">{{ category }}</span>
-                  {% endfor %}
-                </div>
-              {% endif %}
               <h3 class="featured-card-title">{{ featured.title }}</h3>
               {% assign post = featured %}
               <p class="featured-card-excerpt">{% include post-summary.html max_length=160 %}</p>
@@ -87,13 +80,6 @@ layout: default
             {% for post in posts offset: 1 %}
               <article class="post-card">
                 <a href="{{ post.url | relative_url }}" class="post-card-link">
-                  {% if post.categories.size > 0 %}
-                    <div class="post-categories">
-                      {% for category in post.categories limit: 2 %}
-                        <span class="category-pill">{{ category }}</span>
-                      {% endfor %}
-                    </div>
-                  {% endif %}
                   <h3 class="post-card-title">{{ post.title }}</h3>
                   <p class="post-card-excerpt">{% include post-summary.html max_length=120 %}</p>
                   <div class="post-meta-row">
@@ -121,13 +107,6 @@ layout: default
         {% for post in posts %}
           <article class="post-card">
             <a href="{{ post.url | relative_url }}" class="post-card-link">
-              {% if post.categories.size > 0 %}
-                <div class="post-categories">
-                  {% for category in post.categories limit: 2 %}
-                    <span class="category-pill">{{ category }}</span>
-                  {% endfor %}
-                </div>
-              {% endif %}
               <h3 class="post-card-title">{{ post.title }}</h3>
               <p class="post-card-excerpt">{% include post-summary.html max_length=120 %}</p>
               <div class="post-meta-row">

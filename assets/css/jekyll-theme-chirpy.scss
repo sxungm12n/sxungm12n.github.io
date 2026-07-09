@@ -411,11 +411,50 @@ body:has(.page-home) #tail-wrapper {
   z-index: 100;
   background: var(--topbar-bg) !important;
   border-bottom: 1px solid var(--topbar-border);
-  box-shadow: 0 1px 8px rgb(21 34 56 / 6%);
+  box-shadow: 0 2px 12px rgb(21 34 56 / 5%);
+  padding: 0 1.25rem;
 }
 
-#topbar {
-  height: 3.5rem;
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 3.75rem;
+  max-width: 100%;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.topbar-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border-radius: var(--radius-sm);
+  color: var(--text-2);
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background: var(--brand-soft);
+    color: var(--brand);
+  }
 }
 
 #topbar .btn-link {
@@ -430,10 +469,15 @@ body:has(.page-home) #tail-wrapper {
   font-size: 0.88rem;
   font-weight: 500;
   color: var(--text-2);
+  padding-left: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   a {
     color: var(--text);
     font-weight: 600;
+    text-decoration: none;
 
     &:hover {
       color: var(--brand);
@@ -446,15 +490,94 @@ body:has(.page-home) #tail-wrapper {
 }
 
 #topbar-title {
+  display: none;
   font-weight: 700;
   color: var(--text);
   font-family: $font;
+  font-size: 1rem;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 991.98px) {
+  #breadcrumb {
+    display: none;
+  }
+
+  #topbar-title {
+    display: block;
+    flex: 1;
+    text-align: center;
+  }
+
+  .topbar-left {
+    flex: 1;
+    justify-content: center;
+    position: relative;
+  }
+
+  #sidebar-trigger {
+    position: absolute;
+    left: 0;
+  }
+
+  #sidebar-collapse-toggle {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) {
+  #sidebar-trigger {
+    display: none !important;
+  }
+}
+
+/* Search bar */
+search#search,
+#search.topbar-search {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 260px;
+  height: 2.5rem;
+  padding: 0 0.85rem;
+  margin: 0 !important;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+
+  @media (min-width: 992px) {
+    display: flex;
+  }
+
+  > i {
+    flex-shrink: 0;
+    font-size: 0.82rem;
+    color: var(--brand);
+    opacity: 0.85;
+  }
+
+  &:focus-within {
+    border-color: var(--brand);
+    background: var(--surface);
+    box-shadow: 0 0 0 3px var(--brand-ring);
+  }
 }
 
 #search-input {
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--surface);
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 0.25rem;
+  font-size: 0.875rem;
   color: var(--text);
   font-weight: 500;
 
@@ -463,14 +586,33 @@ body:has(.page-home) #tail-wrapper {
   }
 
   &:focus {
-    border-color: var(--brand);
-    box-shadow: 0 0 0 3px var(--brand-ring);
+    border: 0 !important;
+    box-shadow: none !important;
+    outline: none;
   }
 }
 
-#search-cancel {
+#search-cancel,
+.topbar-cancel-btn {
+  display: none;
+  font-size: 0.82rem;
+  font-weight: 600;
   color: var(--text-2);
-  font-weight: 500;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--brand);
+    background: var(--brand-soft);
+  }
+}
+
+#search-trigger {
+  @media (min-width: 992px) {
+    display: none !important;
+  }
 }
 
 /* ================================================================
@@ -1469,7 +1611,7 @@ article[data-toc] > header {
 #sidebar-collapse-toggle {
   display: none;
   color: var(--text-2) !important;
-  border: 1px solid var(--border);
+  border: none;
   border-radius: var(--radius-sm);
 
   &:hover {
@@ -1581,12 +1723,4 @@ a.post-tag.btn-outline-primary {
   background: var(--brand) !important;
   border-color: var(--brand) !important;
   color: #fff !important;
-}
-
-#search-input {
-  border: 1px solid var(--border);
-}
-
-#sidebar-collapse-toggle {
-  border: 1px solid var(--border);
 }
