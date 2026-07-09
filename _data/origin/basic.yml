@@ -1,6 +1,6 @@
-# fonts
+# fonts — Pretendard (matches production cors.yml)
 
-webfonts: /assets/lib/fonts/main.css
+webfonts: https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css
 
 # Libraries
 
