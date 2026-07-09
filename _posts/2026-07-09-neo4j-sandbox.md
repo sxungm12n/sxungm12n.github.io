@@ -63,6 +63,9 @@ Sandbox에 접속해 **Launch the Free Sandbox** 로 이동하면, Sandbox에서
 
 **Open with Browser** 로 이 DB를 열람할 수 있습니다. **Connect with Sandbox Login** 으로 로그인하거나, 앞서 확인한 Database 정보를 입력하면 연결됩니다.
 
+![인스턴스 연결 화면](/assets/img/neo4j/connect-dialog.png)
+*Connect to instance 화면. "Connect with Sandbox Login"으로 바로 로그인하거나, 아래에 Database user·Password를 직접 입력해 연결한다. (인스턴스 주소는 보안상 흐림 처리)*
+
 연결되면 왼쪽 **Database information** 패널에서 이 DB가 어떤 노드(Movie, Person)와 관계(ACTED_IN, DIRECTED, FOLLOWS, PRODUCED, REVIEWED, WROTE), 속성 키(born, name, rating, released, roles, summary, tagline, title)를 갖는지 한눈에 볼 수 있습니다.
 
 ![Neo4j Browser 첫 화면](/assets/img/neo4j/db-info.png)
