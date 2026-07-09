@@ -1188,6 +1188,31 @@ article[data-toc] > header {
   margin-bottom: 1.25rem;
 }
 
+#archives {
+  .date.archive-date {
+    font-size: 0.88rem;
+    font-weight: 500;
+    font-family: $font;
+    color: var(--text-3);
+    min-width: 6.75rem;
+  }
+
+  ul li a {
+    margin-left: 7.25rem;
+  }
+
+  @media (max-width: 575.98px) {
+    .date.archive-date {
+      min-width: 5.25rem;
+      font-size: 0.8rem;
+    }
+
+    ul li a {
+      margin-left: 5.75rem;
+    }
+  }
+}
+
 /* --- Pagination --- */
 .pagination {
   font-family: $font;
