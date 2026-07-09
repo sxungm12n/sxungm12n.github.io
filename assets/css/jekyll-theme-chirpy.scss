@@ -39,7 +39,8 @@ $font: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --text: #0f172a;
   --text-2: #475569;
   --text-3: #94a3b8;
-  --border: #e2e8f0;
+  --border: #b8c4d4;
+  --border-strong: #94a3b8;
 
   --shadow: 0 1px 3px rgb(15 23 42 / 6%), 0 4px 16px rgb(15 23 42 / 4%);
   --shadow-lg: 0 8px 32px rgb(15 23 42 / 10%);
@@ -55,7 +56,7 @@ $font: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --text-muted-color: var(--text-2);
   --main-bg: var(--bg);
   --card-bg: var(--surface);
-  --card-border-color: var(--border);
+  --card-border-color: var(--border-strong);
   --card-shadow: var(--shadow);
   --card-hover-bg: var(--brand-soft);
   --site-title-color: #f8fafc;
@@ -67,8 +68,8 @@ $font: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --sidebar-btn-bg: rgb(255 255 255 / 8%);
   --sidebar-btn-color: #cbd5e1;
   --avatar-border-color: rgb(255 255 255 / 12%);
-  --topbar-bg: rgb(241 245 249 / 85%);
-  --topbar-border: var(--border);
+  --topbar-bg: #ffffff;
+  --topbar-border: var(--border-strong);
   --topbar-text-color: var(--text-2);
   --search-input-bg: var(--surface);
   --search-border-color: var(--border);
@@ -130,7 +131,8 @@ $font: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --text: #f1f5f9;
   --text-2: #94a3b8;
   --text-3: #64748b;
-  --border: rgb(255 255 255 / 8%);
+  --border: rgb(255 255 255 / 14%);
+  --border-strong: rgb(255 255 255 / 22%);
 
   --shadow: 0 1px 3px rgb(0 0 0 / 30%), 0 4px 16px rgb(0 0 0 / 20%);
   --shadow-lg: 0 8px 32px rgb(0 0 0 / 35%);
@@ -142,7 +144,7 @@ $font: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --text-muted-color: var(--text-2);
   --main-bg: var(--bg);
   --card-bg: var(--surface);
-  --card-border-color: var(--border);
+  --card-border-color: var(--border-strong);
   --card-shadow: var(--shadow);
   --card-hover-bg: var(--brand-soft);
   --site-title-color: #f8fafc;
@@ -154,8 +156,8 @@ $font: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --sidebar-btn-bg: rgb(255 255 255 / 6%);
   --sidebar-btn-color: #94a3b8;
   --avatar-border-color: rgb(255 255 255 / 10%);
-  --topbar-bg: rgb(11 17 32 / 85%);
-  --topbar-border: var(--border);
+  --topbar-bg: #121a2a;
+  --topbar-border: var(--border-strong);
   --topbar-text-color: var(--text-2);
   --search-input-bg: var(--surface);
   --search-border-color: var(--border);
@@ -261,20 +263,27 @@ body:has(.page-home) #tail-wrapper {
 /* --- Sidebar --- */
 #sidebar {
   background: var(--sidebar-bg);
-  border-right: 1px solid var(--sidebar-border-color);
+  border-right: 1px solid var(--border-strong);
+  align-items: center !important;
 }
 
 #sidebar .profile-wrapper {
-  padding: 2rem 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 1rem 1rem !important;
+  margin-top: 0 !important;
+  margin-bottom: 0.5rem;
   text-align: center;
-  margin-top: 0;
 }
 
 #avatar {
   width: 5.5rem !important;
   height: 5.5rem !important;
+  margin: 0 auto;
   border-radius: 50%;
-  border: 3px solid var(--avatar-border-color);
+  border: 3px solid rgb(255 255 255 / 25%);
   box-shadow: 0 4px 20px rgb(0 0 0 / 25%);
   overflow: hidden;
 
@@ -295,32 +304,51 @@ body:has(.page-home) #tail-wrapper {
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--site-title-color);
-  margin-top: 1rem;
+  margin: 1rem auto 0.25rem;
   letter-spacing: -0.02em;
+  text-align: center;
+  width: 100%;
 }
 
 #sidebar .site-subtitle {
   font-size: 0.78rem;
   color: var(--site-subtitle-color);
   height: auto;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
 #sidebar .nav {
-  padding: 0.5rem 0.75rem;
+  width: 100%;
+  padding: 0.5rem 1rem !important;
   gap: 2px;
+}
+
+#sidebar .nav .nav-item {
+  width: 100%;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 #sidebar .nav .nav-item .nav-link {
   font-size: 0.875rem;
   font-weight: 500;
-  padding: 0.5rem 0.75rem;
+  padding: 0.55rem 0.85rem;
   border-radius: var(--radius-sm);
   color: var(--sidebar-text);
   text-transform: none;
+  justify-content: center;
+  text-align: center;
 
   i {
     width: 1.1rem;
-    opacity: 0.7;
+    margin-right: 0.65rem !important;
+    opacity: 0.85;
+  }
+
+  span {
+    flex: 0 1 auto;
   }
 
   &:hover {
@@ -341,7 +369,10 @@ body:has(.page-home) #tail-wrapper {
 }
 
 #sidebar .sidebar-bottom {
-  padding: 1rem 0.75rem 1.25rem;
+  width: 100%;
+  padding: 1rem 1rem 1.25rem !important;
+  justify-content: center;
+  gap: 0.5rem;
 
   a, .btn {
     color: var(--sidebar-text);
@@ -358,43 +389,71 @@ body:has(.page-home) #tail-wrapper {
 
 /* --- Topbar --- */
 #topbar-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   background: var(--topbar-bg) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--topbar-border);
+  border-bottom: 2px solid var(--topbar-border);
+  box-shadow: 0 2px 12px rgb(15 23 42 / 8%);
 }
 
 #topbar {
-  height: 3.25rem;
+  height: 3.5rem;
+}
+
+#topbar .btn-link {
+  color: var(--text-2);
+
+  &:hover {
+    color: var(--brand);
+  }
 }
 
 #breadcrumb {
-  font-size: 0.84rem;
-  color: var(--text-3);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-2);
 
   a {
-    color: var(--text-2);
+    color: var(--text);
+    font-weight: 600;
 
     &:hover {
       color: var(--brand);
     }
   }
+
+  span:last-child {
+    color: var(--text-3);
+  }
 }
 
 #topbar-title {
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text);
+  font-family: $font;
 }
 
 #search-input {
   border-radius: 999px;
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--border-strong);
   background: var(--surface);
+  color: var(--text);
+  font-weight: 500;
+
+  &::placeholder {
+    color: var(--text-3);
+  }
 
   &:focus {
     border-color: var(--brand);
     box-shadow: 0 0 0 3px var(--brand-ring);
   }
+}
+
+#search-cancel {
+  color: var(--text-2);
+  font-weight: 500;
 }
 
 /* ================================================================
@@ -552,7 +611,7 @@ body:has(.page-home) #tail-wrapper {
 
 .featured-card {
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--border-strong);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   overflow: hidden;
@@ -611,11 +670,11 @@ body:has(.page-home) #tail-wrapper {
   color: var(--brand);
   font-weight: 600;
   font-size: 0.88rem;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border-strong);
 
   @media (min-width: 576px) {
     border-top: 0;
-    border-left: 1px solid var(--border);
+    border-left: 1px solid var(--border-strong);
     min-width: 8rem;
   }
 }
@@ -638,7 +697,7 @@ body:has(.page-home) #tail-wrapper {
 
 .post-card {
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--border-strong);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
@@ -710,7 +769,7 @@ body:has(.page-home) #tail-wrapper {
   color: var(--text-3);
   margin-top: auto;
   padding-top: 0.5rem;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border-strong);
 }
 
 .read-time {
@@ -734,7 +793,7 @@ body:has(.page-home) #tail-wrapper {
 article[data-toc] > header {
   margin-bottom: 2rem;
   padding-bottom: 1.25rem;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-strong);
 
   h1 {
     font-size: clamp(1.5rem, 3vw, 2rem);
@@ -781,7 +840,7 @@ article[data-toc] > header {
 
   img {
     border-radius: var(--radius-sm);
-    border: 1px solid var(--border);
+    border: 1.5px solid var(--border-strong);
     box-shadow: var(--shadow);
   }
 
@@ -819,7 +878,7 @@ article[data-toc] > header {
     border-radius: 5px;
     padding: 0.12em 0.4em;
     font-size: 0.88em;
-    border: 1px solid var(--border);
+    border: 1.5px solid var(--border-strong);
   }
 
   a:not(.img-link) {
@@ -834,7 +893,7 @@ article[data-toc] > header {
   table {
     border-radius: var(--radius-sm);
     overflow: hidden;
-    border: 1px solid var(--border);
+    border: 1.5px solid var(--border-strong);
 
     thead {
       background: var(--brand-soft);
@@ -851,7 +910,7 @@ article[data-toc] > header {
   .highlight,
   div.highlighter-rouge {
     border-radius: var(--radius-sm);
-    border: 1px solid var(--border);
+    border: 1.5px solid var(--border-strong);
     overflow: hidden;
   }
 }
@@ -889,7 +948,7 @@ article[data-toc] > header {
 
   .access section {
     background: var(--surface);
-    border: 1px solid var(--border);
+    border: 1.5px solid var(--border-strong);
     border-radius: var(--radius-sm);
     padding: 1rem;
     margin-bottom: 1rem;
@@ -916,19 +975,19 @@ article[data-toc] > header {
 .categories.card,
 #page-tag .card {
   background: var(--surface);
-  border: 1px solid var(--border) !important;
+  border: 1.5px solid var(--border-strong) !important;
   border-radius: var(--radius) !important;
   box-shadow: var(--shadow);
   overflow: hidden;
 
   .card-header {
     background: var(--brand-soft);
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--border-strong);
     font-weight: 600;
   }
 
   .list-group-item {
-    border-color: var(--border);
+    border-color: var(--border-strong);
     color: var(--text-2);
     transition: background 0.2s ease;
 
@@ -954,7 +1013,7 @@ article[data-toc] > header {
 
   .page-item .page-link {
     border-radius: var(--radius-sm);
-    border: 1px solid var(--border);
+    border: 1.5px solid var(--border-strong);
     color: var(--text-2);
     background: var(--surface);
 
@@ -983,7 +1042,7 @@ article[data-toc] > header {
 .site-footer {
   margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border-strong);
 }
 
 .footer-main {
@@ -1040,7 +1099,7 @@ article[data-toc] > header {
     justify-content: center;
     border-radius: 50%;
     background: var(--surface);
-    border: 1px solid var(--border);
+    border: 1.5px solid var(--border-strong);
     color: var(--text-2);
     transition: all 0.2s ease;
 
@@ -1071,7 +1130,7 @@ article[data-toc] > header {
   gap: 1.5rem;
   align-items: flex-start;
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--border-strong);
   border-radius: var(--radius);
   padding: 1.75rem;
   margin-bottom: 2rem;
@@ -1082,7 +1141,7 @@ article[data-toc] > header {
   width: 96px;
   height: 96px;
   border-radius: 50%;
-  border: 3px solid var(--border);
+  border: 3px solid var(--border-strong);
   object-fit: cover;
 }
 
@@ -1151,7 +1210,7 @@ article[data-toc] > header {
 
 .project-card {
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--border-strong);
   border-radius: var(--radius);
   padding: 1.25rem;
   box-shadow: var(--shadow);
@@ -1318,7 +1377,7 @@ article[data-toc] > header {
   justify-content: space-between;
   gap: 1rem;
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--border-strong);
   border-radius: var(--radius);
   padding: 1.25rem;
   box-shadow: var(--shadow);
@@ -1369,6 +1428,15 @@ article[data-toc] > header {
 /* --- Sidebar collapse --- */
 #sidebar-collapse-toggle {
   display: none;
+  color: var(--text-2) !important;
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+
+  &:hover {
+    color: var(--brand) !important;
+    background: var(--brand-soft);
+    border-color: var(--brand-ring);
+  }
 }
 
 @media (min-width: 992px) {
