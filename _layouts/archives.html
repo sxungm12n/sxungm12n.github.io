@@ -8,27 +8,28 @@ layout: page
 {% assign df_strftime = site.data.locales[lang].df.archives.strftime | default: site.data.locales[lang].df.post.strftime | default: '%Y-%m-%d' %}
 {% assign df_dayjs = site.data.locales[lang].df.archives.dayjs | default: site.data.locales[lang].df.post.dayjs | default: 'YYYY-MM-DD' %}
 
-<div id="archives" class="pl-xl-3">
+<div id="archives">
   {% for post in site.posts %}
     {% assign cur_year = post.date | date: '%Y' %}
 
     {% if cur_year != last_year %}
-      {% unless forloop.first %}</ul>{% endunless %}
+      {% unless forloop.first %}</ul></section>{% endunless %}
 
-      <time class="year lead d-block">{{ cur_year }}</time>
-      {{ '<ul class="list-unstyled">' }}
+      <section class="archive-year">
+        <h2 class="archive-year-label">{{ cur_year }}</h2>
+        <ul class="archive-list">
 
       {% assign last_year = cur_year %}
     {% endif %}
 
-    <li>
+    <li class="archive-item">
       {% assign ts = post.date | date: '%s' %}
-      <time class="date archive-date" data-ts="{{ ts }}" data-df="{{ df_dayjs }}">
+      <time class="archive-date" data-ts="{{ ts }}" data-df="{{ df_dayjs }}">
         {{ post.date | date: df_strftime }}
       </time>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <a class="archive-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </li>
 
-    {% if forloop.last %}</ul>{% endif %}
+    {% if forloop.last %}</ul></section>{% endif %}
   {% endfor %}
 </div>
