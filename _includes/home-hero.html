@@ -1,38 +1,34 @@
 <section class="blog-hero" aria-label="소개">
-  <div class="blog-hero-content">
-    <p class="blog-hero-eyebrow">안녕하세요 👋</p>
-    <h1 class="blog-hero-title">{{ site.social.name | default: site.title }}의 블로그</h1>
-    <p class="blog-hero-desc">{{ site.description | strip }}</p>
+  <div class="blog-hero-accent" aria-hidden="true"></div>
+  <div class="blog-hero-inner">
+    <div class="blog-hero-content">
+      <p class="blog-hero-eyebrow">기록하는 개발자</p>
+      <h1 class="blog-hero-title">{{ site.social.name | default: site.title }}</h1>
+      <p class="blog-hero-desc">그래프 DB · RAG · AI를 탐구하고 배운 것을 기록합니다.</p>
 
-    <div class="blog-hero-actions">
-      <a class="hero-btn hero-btn-primary" href="{{ '/about/' | relative_url }}">
-        <i class="fas fa-user fa-fw"></i> 소개 보기
-      </a>
-      <a class="hero-btn hero-btn-ghost" href="https://github.com/{{ site.github.username }}" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-github fa-fw"></i> GitHub
-      </a>
+      <div class="blog-hero-tags" aria-label="주요 주제">
+        <span class="hero-topic">Graph DB</span>
+        <span class="hero-topic">Neo4j</span>
+        <span class="hero-topic">RAG</span>
+        <span class="hero-topic">AI</span>
+      </div>
     </div>
 
-    <div class="blog-hero-tags" aria-label="주요 주제">
-      <span class="hero-topic">Graph DB</span>
-      <span class="hero-topic">RAG</span>
-      <span class="hero-topic">Neo4j</span>
-      <span class="hero-topic">AI</span>
-    </div>
-  </div>
-
-  <div class="blog-hero-stats">
-    <div class="hero-stat">
-      <span class="hero-stat-value">{{ site.posts.size }}</span>
-      <span class="hero-stat-label">게시글</span>
-    </div>
-    <div class="hero-stat">
-      <span class="hero-stat-value">{{ site.tags.size }}</span>
-      <span class="hero-stat-label">태그</span>
-    </div>
-    <div class="hero-stat">
-      <span class="hero-stat-value">{{ site.categories.size }}</span>
-      <span class="hero-stat-label">카테고리</span>
+    <div class="blog-hero-side">
+      <div class="blog-hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-value">{{ site.posts.size }}</span>
+          <span class="hero-stat-label">게시글</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-value">{{ site.tags.size }}</span>
+          <span class="hero-stat-label">태그</span>
+        </div>
+      </div>
+      <div class="blog-hero-actions">
+        <a class="hero-btn hero-btn-primary" href="{{ '/archives/' | relative_url }}">글 모아보기</a>
+        <a class="hero-btn hero-btn-ghost" href="{{ '/about/' | relative_url }}">소개</a>
+      </div>
     </div>
   </div>
 </section>
