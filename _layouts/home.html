@@ -61,7 +61,6 @@ layout: default
               <p class="featured-card-excerpt">{% include post-summary.html max_length=160 %}</p>
               <div class="post-meta-row">
                 <span><i class="far fa-calendar fa-fw"></i> {% include datetime.html date=featured.date lang=lang %}</span>
-                {% include read-time.html content=featured.content lang=lang %}
               </div>
             </div>
             <div class="featured-card-cta">
@@ -84,7 +83,6 @@ layout: default
                   <p class="post-card-excerpt">{% include post-summary.html max_length=120 %}</p>
                   <div class="post-meta-row">
                     <span><i class="far fa-calendar fa-fw"></i> {% include datetime.html date=post.date lang=lang %}</span>
-                    {% include read-time.html content=post.content lang=lang %}
                     {% if post.pin %}
                       <span class="pin-badge"><i class="fas fa-thumbtack fa-fw"></i></span>
                     {% endif %}
@@ -111,7 +109,6 @@ layout: default
               <p class="post-card-excerpt">{% include post-summary.html max_length=120 %}</p>
               <div class="post-meta-row">
                 <span><i class="far fa-calendar fa-fw"></i> {% include datetime.html date=post.date lang=lang %}</span>
-                {% include read-time.html content=post.content lang=lang %}
               </div>
             </a>
           </article>
