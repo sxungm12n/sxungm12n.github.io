@@ -12,6 +12,8 @@ toc: true
 
 ## 왜 Neo4j인가
 
+![Neo4j 로고](/assets/img/neo4j/neo4j-logo.png){: .logo}
+
 Neo4j는 노드·관계·속성으로 구성된 **Property Graph 모델** 을 가장 대표적으로 구현한 그래프 DB입니다. 관계 탐색에 최적화된 엔진과 **Cypher** 쿼리 언어를 통해 복잡한 연결 구조를 직관적으로 표현할 수 있어, 관계 중심 AI 시스템에서 사실상 표준처럼 쓰입니다.
 
 - 공식 사이트: [https://neo4j.com/](https://neo4j.com/)
@@ -43,7 +45,10 @@ Sandbox에 접속해 **Launch the Free Sandbox** 로 이동하면, Sandbox에서
 ![Neo4j Sandbox 시작 화면](/assets/img/neo4j/sandbox-home.png)
 *Neo4j Sandbox 시작 페이지. "Launch the Free Sandbox"에서 데이터셋을 선택할 수 있다.*
 
-여기서는 **Movies** 데이터셋을 만들어보겠습니다.
+여기서는 **Movies** 데이터셋을 만들어보겠습니다. 데이터셋 목록에서 Movies 카드를 고르면 하단에 `Project: Movies` 가 표시되고, **Create and Download credentials** 버튼으로 생성할 수 있습니다.
+
+![데이터셋 선택 화면](/assets/img/neo4j/select-project.png)
+*Select a project 화면. Movies·OpenStreetMap·Graph Data Science 등 미리 준비된 데이터셋과, 직접 데이터를 넣는 Blank Sandbox를 고를 수 있다. 여기서는 Movies를 선택했다.*
 
 ### ② 접속 정보(Credentials) 확인
 
@@ -54,8 +59,13 @@ Sandbox에 접속해 **Launch the Free Sandbox** 로 이동하면, Sandbox에서
 
 다운로드된 txt 파일을 열면 앞으로 활용하게 될 Neo4j 연결 정보(접속 URI·계정·비밀번호·DB 이름)가 나옵니다. 같은 정보는 화면 상단 메뉴의 **Connection details** 에서도 확인할 수 있고, **Connect via drivers** 에서는 각 언어에 맞춰 어떻게 연결하는지 코드들도 제공됩니다.
 
-![다운로드된 접속 정보](/assets/img/neo4j/credentials.png)
-*접속 정보 txt 파일. URI·USERNAME·PASSWORD·DATABASE가 담겨 있다. (일부 값은 보안상 가림)*
+![접속 정보 txt 파일](/assets/img/neo4j/credentials.png)
+*접속 정보 txt 파일. URI·USERNAME·PASSWORD·DATABASE가 담겨 있다. (일부 값은 보안상 흐림 처리)*
+
+**Connect via drivers** 탭에서는 JavaScript·Python·Java·Go·C# 등 언어별로 드라이버 설치 명령과 연결 코드를 바로 복사해 쓸 수 있습니다. 오른쪽 **Open** 버튼의 드롭다운에서는 Browser·Bloom·Workspace 등 다양한 도구로 이 DB를 열 수도 있습니다.
+
+![Connect via drivers 화면](/assets/img/neo4j/connect-drivers.png)
+*Connect via drivers 탭. 언어를 고르면 드라이버 설치 명령과 연결 예제 코드가 나온다. Open 드롭다운으로 Browser 등 여러 도구로 접속할 수 있다. (코드 안의 접속 주소·비밀번호는 보안상 흐림 처리)*
 
 > ⚠️ **보안 주의** — 접속 URI·비밀번호는 절대 공개 저장소나 블로그에 그대로 올리지 마세요. Sandbox는 휘발성이라 위험이 작지만, AuraDB·로컬 운영 DB라면 자격증명 노출이 곧 침해로 이어집니다. 위 스크린샷도 민감 값을 가려서 실었습니다.
 

@@ -3,6 +3,8 @@ title: "[논문 리뷰] 언어 모델로 하는 순차적 진단 (Sequential Dia
 date: 2026-07-02 09:00:00 +0900
 categories: [Paper Review]
 tags: [paper-review, llm, multi-agent, medical-ai, agent, benchmark]
+description: "의사의 순차적 진단 과정을 흉내 낸 SDBench와, 언어 모델이 다섯 역할을 나눠 맡는 MAI-DxO 시스템을 소개하는 Microsoft AI 논문 리뷰입니다."
+toc: true
 paper:
   title: "Sequential Diagnosis with Language Models"
   authors: "Nori, H. et al. (Microsoft AI)"

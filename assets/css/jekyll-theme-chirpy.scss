@@ -737,3 +737,85 @@ footer#footer {
   }
 }
 
+/* ============================================================
+   Post polish — logos, captions, intros, dividers
+   ============================================================ */
+
+/* Brand / vendor logos: centered, no heavy shadow */
+.post .content img.logo,
+.post .content img.normal {
+  display: block;
+  margin: 0 auto 1.25rem;
+  box-shadow: none;
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.6rem 0.8rem;
+}
+
+.post .content img.logo {
+  max-width: 180px;
+}
+
+.post .content img.normal {
+  max-width: 220px;
+}
+
+/* Image captions (italic line right below an image) */
+.post .content p:has(> img) + p > em,
+.post .content p:has(> a > img) + p > em {
+  display: block;
+  text-align: center;
+  font-size: 0.86rem;
+  color: var(--text-muted-color, #6b6b6b);
+  margin-top: -0.75rem;
+  margin-bottom: 1.75rem;
+  line-height: 1.55;
+}
+
+/* Opening summary blockquote at the top of posts */
+.post .content > blockquote:first-child {
+  margin-top: 0;
+  margin-bottom: 1.75rem;
+  padding: 0.85rem 1.1rem;
+  border-left-width: 4px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* Section dividers */
+.post .content hr {
+  border: 0;
+  height: 1px;
+  margin: 2.25rem 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgb(31 122 192 / 28%) 20%,
+    rgb(31 122 192 / 28%) 80%,
+    transparent
+  );
+}
+
+/* Numbered step headings (① ② …) */
+.post .content h3 {
+  position: relative;
+}
+
+/* Comparison / feature lists in posts */
+.post .content ul li,
+.post .content ol li {
+  margin-bottom: 0.35rem;
+}
+
+/* Home list: subtle category pill on cards */
+#post-list .card-wrapper .post-meta .categories a {
+  display: inline-block;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  background: rgb(31 122 192 / 8%);
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background: rgb(31 122 192 / 16%);
+  }
+}
