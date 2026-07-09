@@ -29,7 +29,7 @@ $font: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --brand-dark: #1558b0;
   --brand-light: #4a9af0;
   --brand-soft: #e8f2fd;
-  --brand-ring: rgb(26 115 232 / 20%);
+  --brand-ring: rgb(26 115 232 / 35%);
   --brand-glow: rgb(26 115 232 / 12%);
 
   --bg: #f5f8fc;
@@ -41,14 +41,15 @@ $font: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --text: #152238;
   --text-2: #4a5d78;
   --text-3: #7a8da6;
-  --border: #cdd8e8;
-  --border-strong: #a8b8cc;
+  --border: #b4c4d8;
+  --border-strong: #8fa3bc;
 
   --shadow: 0 1px 2px rgb(21 34 56 / 5%), 0 4px 12px rgb(21 34 56 / 4%);
   --shadow-lg: 0 8px 28px rgb(21 34 56 / 9%);
 
   --radius: 12px;
   --radius-sm: 8px;
+  --topbar-height: 3.75rem;
 
   /* Chirpy bridge — all accents blue */
   --link-color: var(--brand);
@@ -58,12 +59,12 @@ $font: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --text-muted-color: var(--text-2);
   --main-bg: var(--bg);
   --card-bg: var(--surface);
-  --card-border-color: var(--border);
+  --card-border-color: var(--border-strong);
   --card-shadow: var(--shadow);
   --card-hover-bg: var(--brand-soft);
   --site-title-color: #f0f6ff;
   --site-subtitle-color: #8fa8c4;
-  --sidebar-border-color: rgb(74 154 240 / 15%);
+  --sidebar-border-color: rgb(74 154 240 / 28%);
   --sidebar-muted-color: #8fa8c4;
   --sidebar-active-color: var(--sidebar-active);
   --sidebar-hover-bg: rgb(74 154 240 / 12%);
@@ -71,20 +72,20 @@ $font: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --sidebar-btn-color: #b8c9de;
   --avatar-border-color: rgb(74 154 240 / 35%);
   --topbar-bg: #ffffff;
-  --topbar-border: var(--border);
+  --topbar-border: var(--border-strong);
   --topbar-text-color: var(--text-2);
   --search-input-bg: var(--surface);
-  --search-border-color: var(--border);
+  --search-border-color: var(--border-strong);
   --search-icon-color: var(--text-3);
   --search-input-focus-border: var(--brand);
   --input-focus-border-color: var(--brand);
   --checkbox-checked-color: var(--brand);
   --btn-share-hover-color: var(--brand);
   --toc-highlight: var(--brand);
-  --btn-border-color: var(--border);
+  --btn-border-color: var(--border-strong);
   --btn-bg: var(--surface);
   --button-bg: var(--surface);
-  --main-border-color: var(--border);
+  --main-border-color: var(--border-strong);
   --label-color: var(--text-2);
   --mask-bg: rgb(12 26 46 / 45%);
   --code-bg: #edf2f9;
@@ -92,18 +93,18 @@ $font: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --blockquote-border-color: var(--brand);
   --blockquote-bg: var(--brand-soft);
   --blockquote-text-color: var(--text-2);
-  --table-border-color: var(--border);
-  --hr-color: var(--border);
+  --table-border-color: var(--border-strong);
+  --hr-color: var(--border-strong);
   --highlight-bg-color: #f0f4fa;
   --highlight-lineno-color: var(--text-3);
   --back2top-bg: var(--brand);
   --back2top-color: #fff;
   --tag-border: var(--brand-ring);
   --tag-hover: var(--brand);
-  --categories-border: var(--border);
+  --categories-border: var(--border-strong);
   --categories-text: var(--brand);
   --categories-text-hover: var(--brand-dark);
-  --timeline-color: var(--border);
+  --timeline-color: var(--border-strong);
   --timeline-node-bg: var(--brand);
   --pin-bg: var(--brand-soft);
   --pin-color: var(--brand);
@@ -112,7 +113,7 @@ $font: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --btn-paginator-hover-color: var(--brand-soft);
   --kbd-wrap-bg: #dde6f2;
   --kbd-bg: #f5f8fc;
-  --kbd-border-color: var(--border);
+  --kbd-border-color: var(--border-strong);
   --kbd-text-color: var(--text);
   --prompt-tip-bg: var(--brand-soft);
   --prompt-tip-icon-color: var(--brand);
@@ -129,7 +130,7 @@ $font: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --brand-dark: #8fc1f8;
   --brand-light: #3d8ee8;
   --brand-soft: rgb(91 163 245 / 14%);
-  --brand-ring: rgb(91 163 245 / 24%);
+  --brand-ring: rgb(91 163 245 / 38%);
   --brand-glow: rgb(91 163 245 / 10%);
 
   --bg: #08111f;
@@ -141,11 +142,13 @@ $font: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --text: #e8f0fa;
   --text-2: #9bb0c9;
   --text-3: #6a819c;
-  --border: rgb(91 163 245 / 12%);
-  --border-strong: rgb(91 163 245 / 20%);
+  --border: rgb(91 163 245 / 24%);
+  --border-strong: rgb(91 163 245 / 42%);
 
   --shadow: 0 1px 3px rgb(0 0 0 / 35%), 0 4px 12px rgb(0 0 0 / 25%);
   --shadow-lg: 0 8px 28px rgb(0 0 0 / 40%);
+
+  --topbar-height: 3.75rem;
 
   --link-color: var(--brand);
   --heading-color: var(--text);
@@ -159,7 +162,7 @@ $font: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --card-hover-bg: var(--brand-soft);
   --site-title-color: #f0f6ff;
   --site-subtitle-color: #6a819c;
-  --sidebar-border-color: rgb(91 163 245 / 10%);
+  --sidebar-border-color: rgb(91 163 245 / 22%);
   --sidebar-muted-color: #6a819c;
   --sidebar-active-color: var(--sidebar-active);
   --sidebar-hover-bg: rgb(91 163 245 / 10%);
@@ -170,17 +173,17 @@ $font: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --topbar-border: var(--border-strong);
   --topbar-text-color: var(--text-2);
   --search-input-bg: var(--surface);
-  --search-border-color: var(--border);
+  --search-border-color: var(--border-strong);
   --search-icon-color: var(--text-3);
   --search-input-focus-border: var(--brand);
   --input-focus-border-color: var(--brand);
   --checkbox-checked-color: var(--brand);
   --btn-share-hover-color: var(--brand);
   --toc-highlight: var(--brand);
-  --btn-border-color: var(--border);
+  --btn-border-color: var(--border-strong);
   --btn-bg: var(--surface);
   --button-bg: var(--surface);
-  --main-border-color: var(--border);
+  --main-border-color: var(--border-strong);
   --label-color: var(--text-2);
   --mask-bg: rgb(0 0 0 / 60%);
   --code-bg: #152030;
@@ -188,18 +191,18 @@ $font: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --blockquote-border-color: var(--brand);
   --blockquote-bg: var(--brand-soft);
   --blockquote-text-color: var(--text-2);
-  --table-border-color: var(--border);
-  --hr-color: var(--border);
+  --table-border-color: var(--border-strong);
+  --hr-color: var(--border-strong);
   --highlight-bg-color: #0e1828;
   --highlight-lineno-color: var(--text-3);
   --back2top-bg: var(--brand);
   --back2top-color: #08111f;
   --tag-border: var(--brand-ring);
   --tag-hover: var(--brand);
-  --categories-border: var(--border);
+  --categories-border: var(--border-strong);
   --categories-text: var(--brand);
   --categories-text-hover: var(--brand-dark);
-  --timeline-color: var(--border);
+  --timeline-color: var(--border-strong);
   --timeline-node-bg: var(--brand);
   --pin-bg: var(--brand-soft);
   --pin-color: var(--brand);
@@ -208,7 +211,7 @@ $font: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --btn-paginator-hover-color: var(--brand-soft);
   --kbd-wrap-bg: #1e2d42;
   --kbd-bg: #152030;
-  --kbd-border-color: var(--border);
+  --kbd-border-color: var(--border-strong);
   --kbd-text-color: var(--text);
   --prompt-tip-bg: var(--brand-soft);
   --prompt-tip-icon-color: var(--brand);
@@ -409,10 +412,13 @@ body:has(.page-home) #tail-wrapper {
   position: sticky;
   top: 0;
   z-index: 100;
+  height: auto !important;
+  min-height: var(--topbar-height);
   background: var(--topbar-bg) !important;
   border-bottom: 1px solid var(--topbar-border);
   box-shadow: 0 2px 12px rgb(21 34 56 / 5%);
   padding: 0 1.25rem;
+  overflow: visible;
 }
 
 .topbar-inner {
@@ -420,7 +426,7 @@ body:has(.page-home) #tail-wrapper {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  height: 3.75rem;
+  min-height: var(--topbar-height);
   max-width: 100%;
 }
 
@@ -430,6 +436,7 @@ body:has(.page-home) #tail-wrapper {
   gap: 0.5rem;
   min-width: 0;
   flex: 1;
+  overflow: hidden;
 }
 
 .topbar-right {
@@ -450,6 +457,7 @@ body:has(.page-home) #tail-wrapper {
   color: var(--text-2);
   text-decoration: none;
   transition: background 0.2s ease, color 0.2s ease;
+  flex-shrink: 0;
 
   &:hover {
     background: var(--brand-soft);
@@ -466,6 +474,8 @@ body:has(.page-home) #tail-wrapper {
 }
 
 #breadcrumb {
+  flex: 1;
+  min-width: 0;
   font-size: 0.88rem;
   font-weight: 500;
   color: var(--text-2);
@@ -499,38 +509,93 @@ body:has(.page-home) #tail-wrapper {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  min-width: 0;
 }
 
 @media (max-width: 991.98px) {
+  .topbar-inner {
+    display: grid;
+    grid-template-columns: 2.25rem minmax(0, 1fr) auto;
+    grid-template-areas: 'menu title actions';
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .topbar-left {
+    display: contents;
+    overflow: visible;
+  }
+
   #breadcrumb {
     display: none;
   }
 
-  #topbar-title {
-    display: block;
-    flex: 1;
-    text-align: center;
-  }
-
-  .topbar-left {
-    flex: 1;
-    justify-content: center;
-    position: relative;
-  }
-
   #sidebar-trigger {
-    position: absolute;
-    left: 0;
+    grid-area: menu;
+    justify-self: start;
+    position: static;
+  }
+
+  #topbar-title {
+    grid-area: title;
+    display: block;
+    text-align: center;
+    padding: 0 0.25rem;
+  }
+
+  .topbar-right {
+    grid-area: actions;
+    justify-self: end;
   }
 
   #sidebar-collapse-toggle {
     display: none !important;
+  }
+
+  .topbar-inner:has(#search.d-flex) {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: 'search cancel';
+  }
+
+  .topbar-inner:has(#search.d-flex) .topbar-left {
+    display: none;
+  }
+
+  .topbar-inner:has(#search.d-flex) .topbar-right {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: 'search cancel';
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .topbar-inner:has(#search.d-flex) #search {
+    grid-area: search;
+    display: flex !important;
+    width: 100%;
+    max-width: none;
+  }
+
+  .topbar-inner:has(#search.d-flex) #search-cancel {
+    grid-area: cancel;
+    display: inline-flex !important;
+    align-items: center;
   }
 }
 
 @media (min-width: 992px) {
   #sidebar-trigger {
     display: none !important;
+  }
+
+  #sidebar-collapse-toggle {
+    flex-shrink: 0;
+  }
+
+  #breadcrumb {
+    max-width: calc(100% - 3rem);
   }
 }
 
@@ -546,7 +611,7 @@ search#search,
   padding: 0 0.85rem;
   margin: 0 !important;
   border-radius: 999px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
   background: var(--bg);
   transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 
@@ -621,7 +686,7 @@ search#search,
 .blog-hero {
   position: relative;
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
   border-radius: var(--radius);
   margin-bottom: 2rem;
   overflow: hidden;
@@ -746,7 +811,7 @@ search#search,
 .hero-btn-ghost {
   background: transparent;
   color: var(--text-2);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
 
   &:hover {
     border-color: var(--brand);
@@ -794,7 +859,7 @@ search#search,
 
 .featured-card {
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   overflow: hidden;
@@ -802,7 +867,7 @@ search#search,
 
   &:hover {
     box-shadow: var(--shadow-lg);
-    border-color: var(--brand-ring);
+    border-color: var(--brand-light);
   }
 }
 
@@ -880,14 +945,14 @@ search#search,
 
 .post-card {
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
   height: 100%;
 
   &:hover {
-    border-color: var(--brand-ring);
+    border-color: var(--brand-light);
     box-shadow: var(--shadow-lg);
   }
 }
@@ -994,6 +1059,14 @@ article[data-toc] > header {
   }
 }
 
+/* Mobile TOC bar — stick below topbar, not on top of it */
+#toc-bar {
+  top: var(--topbar-height) !important;
+  z-index: 90;
+  height: var(--topbar-height);
+  background: var(--surface);
+}
+
 .post .content {
   line-height: 1.85;
   font-size: 1rem;
@@ -1018,7 +1091,7 @@ article[data-toc] > header {
 
   img {
     border-radius: var(--radius-sm);
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-strong);
     box-shadow: var(--shadow);
   }
 
@@ -1056,7 +1129,7 @@ article[data-toc] > header {
     border-radius: 5px;
     padding: 0.12em 0.4em;
     font-size: 0.88em;
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-strong);
   }
 
   a:not(.img-link) {
@@ -1071,7 +1144,7 @@ article[data-toc] > header {
   table {
     border-radius: var(--radius-sm);
     overflow: hidden;
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-strong);
 
     thead {
       background: var(--brand-soft);
@@ -1088,7 +1161,7 @@ article[data-toc] > header {
   .highlight,
   div.highlighter-rouge {
     border-radius: var(--radius-sm);
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-strong);
     overflow: hidden;
   }
 }
@@ -1126,7 +1199,7 @@ article[data-toc] > header {
 
   .access section {
     background: var(--surface);
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-strong);
     border-radius: var(--radius-sm);
     padding: 1rem;
     margin-bottom: 1rem;
@@ -1153,7 +1226,7 @@ article[data-toc] > header {
 .categories.card,
 #page-tag .card {
   background: var(--surface);
-  border: 1px solid var(--border) !important;
+  border: 1px solid var(--border-strong) !important;
   border-radius: var(--radius) !important;
   box-shadow: var(--shadow);
   overflow: hidden;
@@ -1234,14 +1307,14 @@ article[data-toc] > header {
     align-items: center;
     gap: 1rem;
     padding: 0.85rem 1rem;
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-strong);
     border-radius: var(--radius-sm);
     background: var(--surface);
     box-shadow: var(--shadow);
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
     &:hover {
-      border-color: var(--brand-ring);
+      border-color: var(--brand-light);
       box-shadow: var(--shadow-lg);
     }
   }
@@ -1305,7 +1378,7 @@ article[data-toc] > header {
 
   .page-item .page-link {
     border-radius: var(--radius-sm);
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-strong);
     color: var(--text-2);
     background: var(--surface);
 
@@ -1391,7 +1464,7 @@ article[data-toc] > header {
     justify-content: center;
     border-radius: 50%;
     background: var(--surface);
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-strong);
     color: var(--text-2);
     transition: all 0.2s ease;
 
@@ -1422,7 +1495,7 @@ article[data-toc] > header {
   gap: 1.5rem;
   align-items: flex-start;
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
   border-radius: var(--radius);
   padding: 1.75rem;
   margin-bottom: 2rem;
@@ -1502,7 +1575,7 @@ article[data-toc] > header {
 
 .project-card {
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
   border-radius: var(--radius);
   padding: 1.25rem;
   box-shadow: var(--shadow);
@@ -1581,7 +1654,7 @@ article[data-toc] > header {
 .series-post-list {
   margin: 0 0 1rem;
   padding-left: 1.15rem;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border-strong);
   padding-top: 0.75rem;
 
   li {
@@ -1689,7 +1762,7 @@ article[data-toc] > header {
   .paper-info-summary {
     margin-top: 0.6rem;
     padding-top: 0.6rem;
-    border-top: 1px dashed var(--border);
+    border-top: 1px dashed var(--border-strong);
     font-size: 0.9rem;
     color: var(--text-2);
     line-height: 1.65;
@@ -1707,7 +1780,7 @@ article[data-toc] > header {
   justify-content: space-between;
   gap: 1rem;
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
   border-radius: var(--radius);
   padding: 1.25rem;
   box-shadow: var(--shadow);
@@ -1857,7 +1930,7 @@ article[data-toc] > header {
 .btn.btn-outline-primary,
 a.post-tag.btn-outline-primary {
   color: var(--brand) !important;
-  border-color: var(--brand-ring) !important;
+  border-color: var(--border-strong) !important;
   background: transparent !important;
 
   &:hover {
