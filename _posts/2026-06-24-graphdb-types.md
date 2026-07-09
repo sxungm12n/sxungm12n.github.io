@@ -1,7 +1,7 @@
 ---
 title: GraphDB 종류와 Neo4j를 선택한 이유
 date: 2026-06-24 10:00:00 +0900
-categories: [LLM, RAG, GraphRAG]
+categories: [GraphRAG]
 tags: [graphdb, neo4j, memgraph, tigergraph, neptune, falkordb]
 description: "Neo4j, Memgraph, TigerGraph, Amazon Neptune, FalkorDB 등 대표 GraphDB를 비교하고, 관계 탐색·분석·생태계 관점에서 Neo4j를 선택한 이유를 정리합니다."
 toc: true

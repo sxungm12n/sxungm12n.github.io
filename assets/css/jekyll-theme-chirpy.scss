@@ -1468,8 +1468,33 @@ article[data-toc] > header {
   border-radius: 999px;
 }
 
+.series-post-list {
+  margin: 0 0 1rem;
+  padding-left: 1.15rem;
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
+
+  li {
+    font-size: 0.82rem;
+    margin-bottom: 0.35rem;
+    line-height: 1.45;
+  }
+
+  a {
+    color: var(--text-2);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--brand);
+    }
+  }
+}
+
 .project-links {
   margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 
   a {
     display: inline-flex;
@@ -1485,6 +1510,19 @@ article[data-toc] > header {
 
     &:hover {
       background: var(--brand-dark);
+      color: #fff;
+    }
+
+    &.project-link-secondary {
+      color: var(--brand);
+      background: var(--brand-soft);
+      border: 1px solid var(--brand-ring);
+
+      &:hover {
+        background: var(--brand);
+        color: #fff;
+        border-color: var(--brand);
+      }
     }
   }
 }
