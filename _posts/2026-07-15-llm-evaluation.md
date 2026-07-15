@@ -1,7 +1,7 @@
 ---
 title: "LLM은 누가, 어떻게 평가할까? — 방법과 항목으로 나눠 보는 AI 평가"
-date: 2026-07-09
-categories: [LLM]
+date: 2026-07-15 11:30:00 +0900
+categories: [LLM, 기타]
 tags: [LLM, Evaluation, Benchmark, LLM-as-a-Judge, Hallucination, Red Teaming]
 description: "MMLU 90점, Chatbot Arena 1위 같은 뉴스는 대체 무엇을 어떻게 채점한 걸까? AI 평가를 '어떻게 채점하나(방법)'와 '무엇을 보나(항목)'로 나눠, 벤치마크·자동지표·사람평가·LLM 심사위원부터 실무 평가 순서와 앞으로의 방향까지 정리한 글."
 mermaid: true
