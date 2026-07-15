@@ -1,7 +1,7 @@
 ---
 title: "GraphRAG 완전정복: 지식 그래프로 LLM을 똑똑하게"
 date: 2026-07-04
-categories: [GraphRAG]
+categories: [LLM, GraphRAG]
 tags: [RAG, GraphRAG, Knowledge Graph, LLM, Neo4j, Cypher]
 description: "RAG의 기본 원리부터 지식 그래프, GraphRAG의 인덱싱·검색 파이프라인, Cypher 쿼리, 최신 벤치마크와 변종들, 그리고 '언제 쓰지 말아야 하는가'까지 한 편으로 정리한 기술 노트."
 mermaid: true

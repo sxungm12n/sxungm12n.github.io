@@ -1,7 +1,7 @@
 ---
 title: "Neo4j로 그래프 DB 시작하기: Sandbox 실습 가이드"
 date: 2026-07-09
-categories: [GraphRAG]
+categories: [LLM, GraphRAG]
 tags: [Neo4j, Graph Database, Cypher, Sandbox, GraphRAG]
 description: "그래프 DB의 표준 Neo4j를 설치 없이 브라우저에서 바로 시작하는 법 — Sandbox로 데이터셋 만들고, 접속 정보 받고, Cypher로 스키마를 확인하는 실습 가이드."
 mermaid: true
