@@ -1096,10 +1096,10 @@ article[data-toc] > header {
   h3 {
     margin-top: 1.85rem;
     margin-bottom: 0.65rem;
-    font-size: 1.08rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    padding-left: 0.65rem;
-    border-left: 3px solid var(--brand);
+    padding: 0.15rem 0 0.15rem 0.75rem;
+    border-left: 4px solid var(--brand);
     scroll-margin-top: 4.5rem;
   }
 
@@ -1107,8 +1107,8 @@ article[data-toc] > header {
     margin-top: 1.4rem;
     margin-bottom: 0.5rem;
     font-size: 0.98rem;
-    font-weight: 650;
-    color: var(--text);
+    font-weight: 700;
+    color: var(--brand);
   }
 
   table {
@@ -1166,6 +1166,185 @@ article[data-toc] > header {
     padding: 0.85rem 1rem;
     color: var(--text-2);
     font-size: 0.95rem;
+  }
+
+  /* Lead summary — first quote in article body */
+  > blockquote:first-of-type {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--text);
+    padding: 1.2rem 1.4rem;
+    margin: 0 0 1.75rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--brand-ring);
+    border-left: 5px solid var(--brand) !important;
+    background: linear-gradient(135deg, var(--brand-soft) 0%, var(--surface) 100%);
+    box-shadow: var(--shadow);
+  }
+
+  /* Key formula callout */
+  .key-formula {
+    text-align: center;
+    font-size: 1.05rem !important;
+    font-weight: 650;
+    color: var(--text) !important;
+    padding: 1.15rem 1.25rem !important;
+    margin: 1.25rem 0 1.75rem !important;
+    border-radius: var(--radius) !important;
+    border: 1px solid var(--brand-ring) !important;
+    border-left: 5px solid var(--brand) !important;
+    background: var(--surface) !important;
+    box-shadow: var(--shadow);
+  }
+
+  /* Pros / cons twin cards */
+  .pc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin: 1rem 0 1.5rem;
+
+    @media (max-width: 575.98px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .pc-pro,
+  .pc-con {
+    padding: 0.9rem 1rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-strong);
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--text-2);
+    box-shadow: var(--shadow);
+
+    strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.02em;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .pc-pro {
+    background: rgb(26 115 232 / 6%);
+    border-color: var(--brand-ring);
+
+    strong {
+      color: var(--brand);
+    }
+  }
+
+  .pc-con {
+    background: rgb(217 119 6 / 7%);
+    border-color: rgb(217 119 6 / 22%);
+
+    strong {
+      color: #d97706;
+    }
+  }
+
+  /* Workflow / figure */
+  p:has(> img[src*='llm-eval-workflow']) {
+    margin: 1.25rem 0 0.35rem;
+    text-align: center;
+
+    img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      background: var(--surface);
+    }
+  }
+
+  /* Compact step list */
+  .eval-steps {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0 1.5rem;
+    counter-reset: eval-step;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+
+    > li {
+      counter-increment: eval-step;
+      position: relative;
+      padding: 0.95rem 1rem 0.95rem 3.25rem;
+      background: var(--surface);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow);
+      margin: 0;
+
+      &::before {
+        content: counter(eval-step);
+        position: absolute;
+        left: 0.85rem;
+        top: 0.95rem;
+        width: 1.65rem;
+        height: 1.65rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: var(--brand);
+        color: #fff;
+        font-size: 0.78rem;
+        font-weight: 700;
+      }
+
+      strong {
+        color: var(--text);
+      }
+    }
+  }
+
+  /* Twin question highlight */
+  .twin-q {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin: 1rem 0 1.35rem;
+    padding: 0;
+    list-style: none;
+
+    @media (max-width: 575.98px) {
+      grid-template-columns: 1fr;
+    }
+
+    li {
+      margin: 0;
+      padding: 0.9rem 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--text-2);
+
+      strong {
+        display: block;
+        color: var(--brand);
+        margin-bottom: 0.25rem;
+        font-size: 0.92rem;
+      }
+    }
+  }
+
+  /* Reference list polish */
+  h2:last-of-type + ul {
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-sm);
+    padding: 1rem 1rem 1rem 1.75rem;
+    box-shadow: var(--shadow);
   }
 
   code:not(pre code) {
