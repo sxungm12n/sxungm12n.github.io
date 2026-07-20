@@ -8,11 +8,11 @@ mermaid: true
 toc: true
 ---
 
-> Sandbox로 그래프 DB를 맛봤다면, 다음은 어디서 이어가야 할까요? 며칠 만에 사라지는 실습 환경 말고, **계속 쓸 수 있는 나만의 그래프 DB** 가 필요해집니다. Neo4j의 완전 관리형 클라우드 서비스 **AuraDB** 를 무료 티어로 시작해, 인스턴스 생성부터 데이터 적재·탐색·시각화까지 한 번에 정리했습니다.
+> [Sandbox](/posts/neo4j-sandbox/)로 그래프 DB를 맛봤다면, 다음은 어디서 이어가야 할까요? 며칠 만에 사라지는 실습 환경 말고, **계속 쓸 수 있는 나만의 그래프 DB** 가 필요해집니다. Neo4j의 완전 관리형 클라우드 서비스 **AuraDB** 를 무료 티어로 시작해, 인스턴스 생성부터 데이터 적재·탐색·시각화까지 한 번에 정리했습니다. 로컬에서 직접 돌리고 싶다면 [Neo4j Desktop 가이드](/posts/neo4j-desktop/)도 함께 보세요.
 
 ## 왜 AuraDB인가
 
-[Sandbox](https://neo4j.com/sandbox/)는 입문용으로는 훌륭하지만, 초기 며칠만 열려 있는 **휘발성 환경** 입니다. 잠깐 실험하기엔 좋아도, 만든 데이터를 계속 붙잡고 다루기엔 아쉽죠.
+[Sandbox](/posts/neo4j-sandbox/)는 입문용으로는 훌륭하지만, 초기 며칠만 열려 있는 **휘발성 환경** 입니다. 잠깐 실험하기엔 좋아도, 만든 데이터를 계속 붙잡고 다루기엔 아쉽죠.
 
 **AuraDB** 는 Neo4j가 직접 운영하는 **완전 관리형(fully managed) 클라우드 그래프 DB** 입니다. 서버 설치도, 버전 업그레이드도, 백업 설정도 Neo4j가 알아서 해주기 때문에 우리는 브라우저만 열면 그래프 DB를 바로 다룰 수 있습니다. 무료 티어까지 제공하므로, 운영에 들어가기 전 학습·프로토타이핑 단계에도 잘 맞습니다.
 
@@ -226,7 +226,14 @@ flowchart LR
 ```
 *생성 → 연결 → 쿼리 → 탐색·시각화 → 모니터링으로 이어지는 AuraDB 실습 흐름.*
 
-무료 티어는 **노드 20만·관계 40만 제한** 과 **30일 미사용 시 자동 삭제** 라는 점만 기억하면, 그래프 DB 학습과 프로토타이핑에는 부족함이 없습니다. 그리고 이렇게 만든 AuraDB 인스턴스가, 그대로 **GraphRAG의 지식 그래프 저장소** 가 됩니다. 다음 글에서는 여기에 실제 데이터를 얹고 애플리케이션과 연결하는 과정을 이어가겠습니다.
+무료 티어는 **노드 20만·관계 40만 제한** 과 **30일 미사용 시 자동 삭제** 라는 점만 기억하면, 그래프 DB 학습과 프로토타이핑에는 부족함이 없습니다. 그리고 이렇게 만든 AuraDB 인스턴스가, 그대로 **GraphRAG의 지식 그래프 저장소** 가 됩니다.
+
+로컬 인스턴스를 직접 돌리거나, Desktop에서 Aura로 덤프를 올려 이전하고 싶다면 아래 글을 이어서 보시면 됩니다.
+
+| 관련 글 | 내용 |
+|---------|------|
+| [Neo4j로 그래프 DB 시작하기: Sandbox 실습 가이드](/posts/neo4j-sandbox/) | 설치 없이 브라우저로 입문 |
+| [Neo4j Desktop 사용하기](/posts/neo4j-desktop/) | 로컬 인스턴스, 플러그인, Aura 마이그레이션, 원격 연결 |
 
 ---
 
@@ -236,3 +243,5 @@ flowchart LR
 - Neo4j AuraDB — [neo4j.com/product/auradb](https://neo4j.com/product/auradb/)
 - Neo4j Cypher Manual — [neo4j.com/docs/cypher-manual](https://neo4j.com/docs/cypher-manual/current/)
 - Neo4j Bloom — [neo4j.com/product/bloom](https://neo4j.com/product/bloom/)
+- [Neo4j로 그래프 DB 시작하기: Sandbox 실습 가이드](/posts/neo4j-sandbox/)
+- [Neo4j Desktop 사용하기](/posts/neo4j-desktop/)

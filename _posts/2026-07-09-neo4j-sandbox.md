@@ -8,7 +8,7 @@ mermaid: true
 toc: true
 ---
 
-> GraphRAG의 지식 그래프를 어디에 저장할까요? 관계 중심 AI 시스템에서 사실상 표준으로 쓰이는 그래프 DB, **Neo4j** 를 설치 없이 브라우저에서 바로 시작하는 방법을 정리했습니다.
+> GraphRAG의 지식 그래프를 어디에 저장할까요? 관계 중심 AI 시스템에서 사실상 표준으로 쓰이는 그래프 DB, **Neo4j** 를 설치 없이 브라우저에서 바로 시작하는 방법을 정리했습니다. 이 글은 입문용이고, 이어서 [AuraDB로 계속 운영하기](/posts/neo4j-auradb/), [Desktop으로 로컬에서 다루기](/posts/neo4j-desktop/)도 있습니다.
 
 ## 왜 Neo4j인가
 
@@ -26,8 +26,8 @@ Neo4j를 쓰는 방법은 목적에 따라 크게 세 갈래입니다.
 
 | 방식 | 설명 | 대표 도구 |
 |------|------|-----------|
-| **클라우드 · 샌드박스** | 설치 없이 브라우저에서 즉시 실행. 학습·빠른 프로토타이핑에 최적 | **AuraDB** (Neo4j 제공 완전 관리형 클라우드 DB), **Sandbox** (학습·데모용 무료 환경, 리소스·기한 제한 있음) |
-| **로컬 설치** | 개인 PC·서버에 직접 설치·운영. UI 기반의 직관적 관리 | **Neo4j Desktop** (로컬 개발용 GUI 관리 도구) |
+| **클라우드 · 샌드박스** | 설치 없이 브라우저에서 즉시 실행. 학습·빠른 프로토타이핑에 최적 | **[AuraDB](/posts/neo4j-auradb/)** (완전 관리형 클라우드 DB), **Sandbox** (학습·데모용 무료 환경, 리소스·기한 제한 있음) |
+| **로컬 설치** | 개인 PC·서버에 직접 설치·운영. UI 기반의 직관적 관리 | **[Neo4j Desktop](/posts/neo4j-desktop/)** (로컬 개발용 GUI 관리 도구) |
 | **컨테이너** | 환경 격리·이식성 확보, 표준화된 배포 | **Docker** (컨테이너 기반 빠른 배포·버전 관리), **Kubernetes** (Enterprise 기반 클러스터링·자동 복구·스케일링) |
 
 이 글에서는 가장 손쉬운 **Neo4j Sandbox** 로 시작해보겠습니다.
@@ -113,6 +113,11 @@ flowchart LR
 
 이렇게 만든 Neo4j 인스턴스가 바로 GraphRAG의 지식 그래프 저장소가 됩니다.
 
+| 다음 글 | 내용 |
+|---------|------|
+| [AuraDB로 그래프 DB 운영 시작하기](/posts/neo4j-auradb/) | 무료 티어로 인스턴스 생성부터 Query·Bloom·Dashboards까지 |
+| [Neo4j Desktop 사용하기](/posts/neo4j-desktop/) | 로컬 인스턴스, 플러그인, Aura 마이그레이션, 원격 연결 |
+
 ---
 
 ## 참고 자료
@@ -121,3 +126,5 @@ flowchart LR
 - Neo4j Sandbox — [neo4j.com/sandbox](https://neo4j.com/sandbox/)
 - Neo4j Cypher Manual — [neo4j.com/docs/cypher-manual](https://neo4j.com/docs/cypher-manual/current/)
 - Neo4j AuraDB — [neo4j.com/product/auradb](https://neo4j.com/product/auradb/)
+- [Neo4j AuraDB로 그래프 DB 운영 시작하기](/posts/neo4j-auradb/)
+- [Neo4j Desktop 사용하기](/posts/neo4j-desktop/)
